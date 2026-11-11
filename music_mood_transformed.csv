@@ -1,0 +1,501 @@
+1. What is your age group?,2. What is your gender?,3. What is your favorite music genre?,4. How important is music in your daily life?,5. How often do you listen to music?,6. Approximately how many hours do you listen to music per day?,7. Which platform do you use most often to listen to music?,8. When do you usually listen to music? (Select all that apply),9. What mood do you most commonly experience when listening to music?,10. Does the type of music you listen to change depending on your mood?,11. How does music generally affect your mood?,12. Which music genre do you usually listen to when you want to feel relaxed?,13. Which music genre do you usually listen to when you want to feel energetic?,Music_Importance_Score,Listening_Frequency_Score,Listening_Hours_Score,Mood_Change_Score
+18–24,Male,Classical,Very important,Every day,Less than 1 hour,YouTube,Relaxing,Happy,Often,Gives me energy,Classical,R&B/Soul,4,5,1,4
+18–24,Female,Country,Moderately important,5–6 days a week,1–2 hours,Spotify,"Travelling/commuting, Studying/working, Relaxing",Happy,Always,Gives me energy,Country,Classical,3,4,2,5
+18–24,Female,R&B/Soul,Extremely important,5–6 days a week,3–4 hours,Spotify,Socialising with friends,Other,Always,Has little/no effect,R&B/Soul,Hip-hop/Rap,5,4,4,5
+18–24,Female,Classical,Very important,Once or twice a week,2–3 hours,YouTube,Other,Relaxed,Always,Helps me focus,Classical,R&B/Soul,4,2,3,5
+35–44,Male,Pop,Extremely important,5–6 days a week,3–4 hours,Spotify,"Other, Travelling/commuting",Relaxed,Sometimes,Gives me energy,Rock,Rock,5,4,4,3
+18–24,Other,Rock,Slightly important,Once or twice a week,Less than 1 hour,YouTube,"During household activities, Socialising with friends, Studying/working",Relaxed,Often,Gives me energy,Hip-hop/Rap,Rock,2,2,1,4
+25–34,Male,Hip-hop/Rap,Moderately important,Rarely,3–4 hours,Apple Music,"Exercising, Socialising with friends, Studying/working, Other",Excited,Often,Makes me happier,R&B/Soul,Pop,3,1,4,4
+18–24,Male,Traditional/Folk,Extremely important,Every day,1–2 hours,Spotify,"Travelling/commuting, Studying/working, Before sleeping",Energetic,Rarely,Helps me focus,Country,Pop,5,5,2,2
+18–24,Female,Traditional/Folk,Extremely important,Every day,2–3 hours,Apple Music,"Before sleeping, Relaxing",Motivated,Often,Helps me relax,Pop,Pop,5,5,3,4
+Under 18,Female,Pop,Slightly important,Rarely,1–2 hours,YouTube,Other,Happy,Rarely,Has little/no effect,Classical,Rock,2,1,2,2
+Under 18,Female,Hip-hop/Rap,Very important,Every day,Less than 1 hour,YouTube,"Studying/working, Relaxing",Calm,Always,Makes me happier,Hip-hop/Rap,Rock,4,5,1,5
+18–24,Female,Pop,Extremely important,Every day,Less than 1 hour,YouTube,"Studying/working, Other",Motivated,Always,Makes me happier,R&B/Soul,Pop,5,5,1,5
+Under 18,Male,Traditional/Folk,Extremely important,3–4 days a week,2–3 hours,Apple Music,"Other, Travelling/commuting, During household activities",Relaxed,Always,Gives me energy,Classical,Country,5,3,3,5
+18–24,Female,Pop,Extremely important,Once or twice a week,1–2 hours,YouTube,"Relaxing, Other",Happy,Always,Helps me relax,Classical,R&B/Soul,5,2,2,5
+18–24,Male,Classical,Moderately important,3–4 days a week,1–2 hours,YouTube,"Travelling/commuting, Studying/working",Energetic,Always,Other,Pop,Pop,3,3,2,5
+35–44,Male,Pop,Extremely important,Every day,2–3 hours,Other,"Studying/working, Before sleeping",Excited,Sometimes,Helps me focus,Traditional/Folk,Pop,5,5,3,3
+18–24,Female,Classical,Moderately important,Every day,1–2 hours,YouTube,"Studying/working, Other, Before sleeping",Energetic,Sometimes,Makes me happier,Country,R&B/Soul,3,5,2,3
+25–34,Female,Pop,Extremely important,Every day,1–2 hours,Spotify,"Exercising, Relaxing",Happy,Sometimes,Has little/no effect,Country,Electronic/Dance,5,5,2,3
+18–24,Male,Country,Extremely important,5–6 days a week,2–3 hours,Spotify,"Exercising, During household activities, Travelling/commuting",Motivated,Never,Helps me focus,R&B/Soul,Electronic/Dance,5,4,3,1
+25–34,Male,Electronic/Dance,Extremely important,3–4 days a week,3–4 hours,YouTube,"Relaxing, Travelling/commuting",Happy,Sometimes,Helps me relax,Electronic/Dance,Traditional/Folk,5,3,4,3
+25–34,Female,Hip-hop/Rap,Not important,Every day,1–2 hours,YouTube,"Studying/working, Other, Socialising with friends, Relaxing",Relaxed,Always,Helps me relax,Other,Pop,1,5,2,5
+Under 18,Male,Rock,Extremely important,Every day,More than 4 hours,Apple Music,During household activities,Happy,Often,Helps me relax,Rock,Electronic/Dance,5,5,5,4
+25–34,Male,Classical,Very important,3–4 days a week,2–3 hours,YouTube,"Exercising, Socialising with friends, During household activities",Relaxed,Often,Makes me happier,Rock,Hip-hop/Rap,4,3,3,4
+18–24,Female,Rock,Extremely important,Every day,3–4 hours,YouTube,Before sleeping,Happy,Always,Makes me happier,Rock,Electronic/Dance,5,5,4,5
+55 and above,Female,Country,Very important,Every day,2–3 hours,Apple Music,"During household activities, Travelling/commuting",Happy,Often,Has little/no effect,Electronic/Dance,Electronic/Dance,4,5,3,4
+35–44,Female,Rock,Very important,Every day,1–2 hours,Spotify,"Before sleeping, During household activities",Motivated,Often,Helps me focus,Classical,Electronic/Dance,4,5,2,4
+35–44,Male,Country,Extremely important,3–4 days a week,3–4 hours,YouTube,Other,Happy,Sometimes,Helps me relax,Rock,Rock,5,3,4,3
+25–34,Female,Pop,Very important,5–6 days a week,2–3 hours,Spotify,"Studying/working, During household activities",Motivated,Often,Gives me energy,Traditional/Folk,Hip-hop/Rap,4,4,3,4
+25–34,Female,Traditional/Folk,Very important,3–4 days a week,2–3 hours,YouTube,"During household activities, Before sleeping",Happy,Often,Makes me happier,Classical,Pop,4,3,3,4
+Under 18,Female,Pop,Very important,Once or twice a week,1–2 hours,Spotify,"During household activities, Exercising",Calm,Always,Helps me relax,Pop,Pop,4,2,2,5
+25–34,Female,R&B/Soul,Extremely important,Every day,1–2 hours,Spotify,Exercising,Energetic,Rarely,Has little/no effect,R&B/Soul,Hip-hop/Rap,5,5,2,2
+55 and above,Female,Country,Moderately important,3–4 days a week,2–3 hours,SoundCloud,"During household activities, Relaxing",Motivated,Sometimes,Gives me energy,Electronic/Dance,Pop,3,3,3,3
+25–34,Female,Pop,Very important,Every day,Less than 1 hour,YouTube,During household activities,Excited,Rarely,Has little/no effect,Classical,Electronic/Dance,4,5,1,2
+25–34,Prefer not to say,Hip-hop/Rap,Extremely important,5–6 days a week,2–3 hours,YouTube,"Socialising with friends, Exercising, Travelling/commuting",Excited,Rarely,Has little/no effect,Hip-hop/Rap,Hip-hop/Rap,5,4,3,2
+18–24,Male,Rock,Very important,3–4 days a week,1–2 hours,YouTube,"Studying/working, Socialising with friends, Travelling/commuting",Happy,Often,Gives me energy,Country,R&B/Soul,4,3,2,4
+Under 18,Male,Classical,Moderately important,5–6 days a week,2–3 hours,YouTube,"Before sleeping, Exercising",Calm,Sometimes,Helps me relax,Pop,Pop,3,4,3,3
+18–24,Female,Classical,Extremely important,5–6 days a week,1–2 hours,Spotify,Relaxing,Relaxed,Sometimes,Helps me focus,Pop,Pop,5,4,2,3
+45–54,Female,Country,Slightly important,Rarely,1–2 hours,YouTube,"Studying/working, Exercising",Motivated,Often,Makes me feel emotional,R&B/Soul,Pop,2,1,2,4
+35–44,Female,Pop,Moderately important,5–6 days a week,2–3 hours,YouTube,"During household activities, Relaxing",Motivated,Sometimes,Gives me energy,R&B/Soul,Rock,3,4,3,3
+25–34,Male,Pop,Moderately important,5–6 days a week,1–2 hours,YouTube,"Other, Exercising",Happy,Sometimes,Helps me relax,Electronic/Dance,Pop,3,4,2,3
+35–44,Male,Pop,Moderately important,3–4 days a week,1–2 hours,Spotify,Socialising with friends,Sad,Always,Has little/no effect,R&B/Soul,Hip-hop/Rap,3,3,2,5
+18–24,Male,R&B/Soul,Extremely important,Every day,2–3 hours,Spotify,Studying/working,Other,Often,Helps me relax,Pop,Country,5,5,3,4
+18–24,Female,R&B/Soul,Very important,Once or twice a week,1–2 hours,YouTube,"Exercising, Other",Relaxed,Often,Helps me focus,R&B/Soul,Country,4,2,2,4
+18–24,Male,Country,Extremely important,Every day,Less than 1 hour,YouTube Music,"Studying/working, Travelling/commuting",Energetic,Often,Gives me energy,R&B/Soul,Pop,5,5,1,4
+18–24,Female,Pop,Extremely important,Every day,1–2 hours,Spotify,"During household activities, Studying/working",Happy,Always,Makes me happier,Traditional/Folk,R&B/Soul,5,5,2,5
+25–34,Male,Rock,Very important,5–6 days a week,1–2 hours,Spotify,"Exercising, During household activities",Happy,Often,Makes me feel emotional,R&B/Soul,Country,4,4,2,4
+18–24,Female,Other,Very important,3–4 days a week,2–3 hours,YouTube,"During household activities, Relaxing",Motivated,Always,Other,Hip-hop/Rap,Hip-hop/Rap,4,3,3,5
+25–34,Female,Electronic/Dance,Very important,Every day,3–4 hours,Other,"Studying/working, Travelling/commuting",Energetic,Often,Has little/no effect,Electronic/Dance,Hip-hop/Rap,4,5,4,4
+18–24,Female,Traditional/Folk,Slightly important,Every day,1–2 hours,YouTube,"Travelling/commuting, During household activities",Relaxed,Often,Gives me energy,Traditional/Folk,R&B/Soul,2,5,2,4
+25–34,Male,Classical,Moderately important,3–4 days a week,Less than 1 hour,Other,"Travelling/commuting, Relaxing, Other",Calm,Always,Makes me happier,Country,Hip-hop/Rap,3,3,1,5
+18–24,Female,Country,Moderately important,Once or twice a week,3–4 hours,YouTube,Exercising,Happy,Often,Gives me energy,Classical,Electronic/Dance,3,2,4,4
+Under 18,Female,Other,Moderately important,Every day,2–3 hours,YouTube,"During household activities, Other",Energetic,Sometimes,Gives me energy,Classical,Other,3,5,3,3
+Under 18,Female,Country,Extremely important,Every day,3–4 hours,YouTube Music,"Relaxing, Socialising with friends, Exercising",Happy,Sometimes,Helps me relax,Country,Country,5,5,4,3
+25–34,Male,Rock,Very important,Every day,Less than 1 hour,Spotify,"Exercising, Travelling/commuting, During household activities",Excited,Always,Helps me relax,Classical,Hip-hop/Rap,4,5,1,5
+25–34,Male,Pop,Extremely important,3–4 days a week,More than 4 hours,YouTube Music,"During household activities, Other, Socialising with friends",Relaxed,Always,Makes me happier,Classical,Hip-hop/Rap,5,3,5,5
+35–44,Female,Pop,Moderately important,Rarely,More than 4 hours,YouTube,"Relaxing, Before sleeping, Studying/working",Sad,Often,Helps me focus,Classical,Pop,3,1,5,4
+Under 18,Male,R&B/Soul,Very important,5–6 days a week,More than 4 hours,Apple Music,"Exercising, Relaxing",Sad,Always,Gives me energy,Traditional/Folk,Hip-hop/Rap,4,4,5,5
+18–24,Male,Hip-hop/Rap,Extremely important,5–6 days a week,More than 4 hours,YouTube,Socialising with friends,Happy,Rarely,Makes me feel emotional,R&B/Soul,R&B/Soul,5,4,5,2
+25–34,Male,Pop,Very important,Once or twice a week,3–4 hours,Spotify,Relaxing,Relaxed,Sometimes,Has little/no effect,Pop,Electronic/Dance,4,2,4,3
+25–34,Male,Electronic/Dance,Moderately important,5–6 days a week,3–4 hours,YouTube,Socialising with friends,Happy,Often,Gives me energy,Classical,Rock,3,4,4,4
+Under 18,Female,Traditional/Folk,Slightly important,Every day,3–4 hours,YouTube,"Studying/working, Other",Other,Always,Helps me relax,Pop,Classical,2,5,4,5
+25–34,Male,Hip-hop/Rap,Very important,5–6 days a week,1–2 hours,Other,"Other, Socialising with friends",Sad,Rarely,Helps me focus,Electronic/Dance,R&B/Soul,4,4,2,2
+18–24,Male,Hip-hop/Rap,Very important,5–6 days a week,Less than 1 hour,YouTube,"Before sleeping, Travelling/commuting",Calm,Often,Makes me happier,Pop,Hip-hop/Rap,4,4,1,4
+Under 18,Female,R&B/Soul,Very important,5–6 days a week,3–4 hours,SoundCloud,"Studying/working, Exercising",Sad,Sometimes,Gives me energy,Hip-hop/Rap,R&B/Soul,4,4,4,3
+18–24,Female,R&B/Soul,Extremely important,Every day,More than 4 hours,YouTube Music,"Studying/working, Socialising with friends",Motivated,Always,Helps me relax,Hip-hop/Rap,R&B/Soul,5,5,5,5
+18–24,Male,R&B/Soul,Slightly important,Every day,More than 4 hours,Spotify,"During household activities, Relaxing",Energetic,Sometimes,Helps me relax,Rock,Electronic/Dance,2,5,5,3
+18–24,Female,Classical,Moderately important,Every day,2–3 hours,YouTube,Travelling/commuting,Relaxed,Rarely,Helps me focus,Classical,Rock,3,5,3,2
+55 and above,Male,Pop,Extremely important,Every day,3–4 hours,Spotify,Other,Calm,Sometimes,Helps me relax,Classical,Rock,5,5,4,3
+35–44,Male,Pop,Extremely important,Every day,2–3 hours,YouTube,"During household activities, Exercising",Happy,Never,Helps me relax,Country,R&B/Soul,5,5,3,1
+35–44,Male,R&B/Soul,Very important,5–6 days a week,1–2 hours,YouTube,"Exercising, Studying/working",Energetic,Rarely,Gives me energy,Traditional/Folk,Hip-hop/Rap,4,4,2,2
+18–24,Male,R&B/Soul,Extremely important,Every day,1–2 hours,YouTube Music,"Other, Before sleeping",Motivated,Often,Helps me focus,Classical,Electronic/Dance,5,5,2,4
+Under 18,Male,Hip-hop/Rap,Moderately important,Once or twice a week,2–3 hours,Spotify,"Studying/working, Exercising",Excited,Rarely,Has little/no effect,Electronic/Dance,R&B/Soul,3,2,3,2
+18–24,Female,Traditional/Folk,Very important,Every day,2–3 hours,YouTube,"Exercising, Studying/working",Energetic,Always,Makes me feel emotional,Other,Pop,4,5,3,5
+25–34,Other,Rock,Very important,5–6 days a week,More than 4 hours,YouTube,"Studying/working, During household activities, Before sleeping",Sad,Rarely,Makes me happier,Classical,Hip-hop/Rap,4,4,5,2
+Under 18,Female,Traditional/Folk,Moderately important,Every day,2–3 hours,Spotify,"Travelling/commuting, Exercising",Energetic,Often,Helps me relax,Pop,R&B/Soul,3,5,3,4
+25–34,Female,Pop,Moderately important,Every day,1–2 hours,YouTube Music,Exercising,Happy,Sometimes,Makes me feel emotional,Classical,Rock,3,5,2,3
+18–24,Female,Pop,Very important,3–4 days a week,3–4 hours,YouTube Music,"Exercising, Before sleeping, Relaxing",Happy,Sometimes,Helps me focus,Traditional/Folk,R&B/Soul,4,3,4,3
+18–24,Prefer not to say,Country,Extremely important,3–4 days a week,2–3 hours,YouTube,"Socialising with friends, During household activities",Relaxed,Often,Has little/no effect,Country,Electronic/Dance,5,3,3,4
+18–24,Male,Traditional/Folk,Very important,5–6 days a week,1–2 hours,Spotify,Other,Motivated,Sometimes,Helps me relax,Traditional/Folk,Pop,4,4,2,3
+Under 18,Female,Pop,Extremely important,5–6 days a week,Less than 1 hour,SoundCloud,"Before sleeping, During household activities, Travelling/commuting",Happy,Sometimes,Makes me feel emotional,Classical,Pop,5,4,1,3
+Under 18,Male,Hip-hop/Rap,Extremely important,5–6 days a week,3–4 hours,YouTube,Socialising with friends,Happy,Rarely,Makes me happier,Classical,R&B/Soul,5,4,4,2
+18–24,Female,R&B/Soul,Very important,3–4 days a week,Less than 1 hour,YouTube,"Exercising, Before sleeping",Calm,Often,Helps me relax,Traditional/Folk,Rock,4,3,1,4
+18–24,Male,R&B/Soul,Extremely important,3–4 days a week,Less than 1 hour,YouTube Music,"Travelling/commuting, During household activities",Sad,Often,Makes me happier,R&B/Soul,Hip-hop/Rap,5,3,1,4
+18–24,Male,Pop,Very important,Every day,Less than 1 hour,Spotify,"Studying/working, Exercising, During household activities",Energetic,Always,Gives me energy,Hip-hop/Rap,Country,4,5,1,5
+35–44,Male,Pop,Very important,Every day,3–4 hours,SoundCloud,"Exercising, Relaxing",Calm,Sometimes,Makes me feel emotional,Rock,Pop,4,5,4,3
+55 and above,Male,Hip-hop/Rap,Slightly important,3–4 days a week,1–2 hours,YouTube,"Exercising, Before sleeping",Energetic,Often,Helps me focus,Traditional/Folk,R&B/Soul,2,3,2,4
+25–34,Male,Rock,Extremely important,3–4 days a week,Less than 1 hour,YouTube Music,"Other, Studying/working",Happy,Sometimes,Helps me focus,R&B/Soul,Electronic/Dance,5,3,1,3
+18–24,Male,Rock,Slightly important,Once or twice a week,1–2 hours,Spotify,Travelling/commuting,Happy,Sometimes,Gives me energy,Traditional/Folk,Pop,2,2,2,3
+55 and above,Male,Traditional/Folk,Very important,Once or twice a week,3–4 hours,YouTube,"Other, Studying/working, Before sleeping",Motivated,Always,Helps me focus,Classical,Rock,4,2,4,5
+25–34,Female,Pop,Very important,3–4 days a week,More than 4 hours,YouTube Music,Other,Happy,Often,Helps me relax,Country,Rock,4,3,5,4
+18–24,Female,Rock,Very important,5–6 days a week,2–3 hours,Spotify,"Travelling/commuting, Relaxing",Energetic,Often,Makes me happier,Country,Rock,4,4,3,4
+18–24,Female,Electronic/Dance,Very important,3–4 days a week,1–2 hours,SoundCloud,Socialising with friends,Excited,Sometimes,Helps me focus,Classical,Pop,4,3,2,3
+18–24,Male,Traditional/Folk,Moderately important,Every day,3–4 hours,YouTube,"Studying/working, During household activities, Other",Happy,Always,Helps me focus,Rock,Pop,3,5,4,5
+35–44,Female,R&B/Soul,Moderately important,3–4 days a week,3–4 hours,YouTube,"Studying/working, Travelling/commuting",Energetic,Often,Makes me happier,Classical,Hip-hop/Rap,3,3,4,4
+18–24,Male,R&B/Soul,Moderately important,5–6 days a week,1–2 hours,Spotify,Socialising with friends,Motivated,Always,Helps me relax,Traditional/Folk,Electronic/Dance,3,4,2,5
+18–24,Female,Rock,Very important,5–6 days a week,1–2 hours,Spotify,"Other, Travelling/commuting, During household activities",Sad,Rarely,Helps me relax,Classical,Electronic/Dance,4,4,2,2
+Under 18,Male,Pop,Moderately important,5–6 days a week,1–2 hours,Spotify,Relaxing,Relaxed,Sometimes,Helps me relax,R&B/Soul,Rock,3,4,2,3
+55 and above,Male,Country,Moderately important,Every day,3–4 hours,Spotify,"Studying/working, Other",Happy,Often,Makes me feel emotional,Classical,Pop,3,5,4,4
+45–54,Male,Hip-hop/Rap,Very important,Every day,2–3 hours,YouTube,"Other, Before sleeping",Energetic,Often,Makes me happier,R&B/Soul,Pop,4,5,3,4
+35–44,Female,R&B/Soul,Moderately important,Every day,More than 4 hours,YouTube,Studying/working,Sad,Sometimes,Helps me focus,Classical,Electronic/Dance,3,5,5,3
+45–54,Male,Pop,Moderately important,3–4 days a week,2–3 hours,YouTube,"Other, During household activities, Before sleeping",Calm,Often,Gives me energy,Classical,Other,3,3,3,4
+45–54,Male,R&B/Soul,Very important,Every day,3–4 hours,Apple Music,"Socialising with friends, Other, Relaxing",Happy,Sometimes,Gives me energy,Hip-hop/Rap,Traditional/Folk,4,5,4,3
+25–34,Male,Hip-hop/Rap,Extremely important,Every day,1–2 hours,Spotify,"During household activities, Relaxing",Excited,Always,Makes me feel emotional,Rock,Hip-hop/Rap,5,5,2,5
+25–34,Female,Pop,Extremely important,3–4 days a week,2–3 hours,Spotify,Relaxing,Happy,Often,Gives me energy,Classical,Pop,5,3,3,4
+25–34,Male,Traditional/Folk,Extremely important,3–4 days a week,2–3 hours,YouTube Music,"Relaxing, During household activities",Motivated,Sometimes,Helps me focus,Traditional/Folk,Pop,5,3,3,3
+25–34,Female,Traditional/Folk,Moderately important,Every day,1–2 hours,SoundCloud,"During household activities, Other, Relaxing, Travelling/commuting",Motivated,Always,Has little/no effect,Electronic/Dance,Pop,3,5,2,5
+18–24,Prefer not to say,R&B/Soul,Very important,Every day,3–4 hours,YouTube,Travelling/commuting,Relaxed,Often,Helps me focus,Classical,Pop,4,5,4,4
+25–34,Male,Electronic/Dance,Extremely important,Every day,2–3 hours,Spotify,"Exercising, Travelling/commuting",Energetic,Always,Makes me happier,R&B/Soul,Hip-hop/Rap,5,5,3,5
+25–34,Male,R&B/Soul,Very important,Once or twice a week,Less than 1 hour,Spotify,"Socialising with friends, Before sleeping",Happy,Always,Helps me relax,Classical,Pop,4,2,1,5
+25–34,Female,Hip-hop/Rap,Very important,5–6 days a week,2–3 hours,Apple Music,Relaxing,Calm,Often,Makes me feel emotional,Classical,Rock,4,4,3,4
+Under 18,Female,Rock,Very important,3–4 days a week,1–2 hours,YouTube,Relaxing,Calm,Often,Has little/no effect,R&B/Soul,Pop,4,3,2,4
+18–24,Female,Classical,Moderately important,Rarely,1–2 hours,Spotify,Travelling/commuting,Happy,Sometimes,Makes me happier,Other,Electronic/Dance,3,1,2,3
+18–24,Female,Country,Extremely important,Every day,2–3 hours,Other,"During household activities, Relaxing",Happy,Always,Has little/no effect,Pop,Electronic/Dance,5,5,3,5
+18–24,Female,Pop,Not important,Rarely,1–2 hours,Apple Music,"During household activities, Other",Happy,Often,Makes me happier,Hip-hop/Rap,Electronic/Dance,1,1,2,4
+18–24,Female,Electronic/Dance,Not important,3–4 days a week,Less than 1 hour,Spotify,"Studying/working, Travelling/commuting",Calm,Sometimes,Makes me happier,Hip-hop/Rap,Electronic/Dance,1,3,1,3
+18–24,Female,R&B/Soul,Very important,Every day,3–4 hours,Spotify,"Relaxing, Other, Exercising",Relaxed,Often,Gives me energy,Classical,Pop,4,5,4,4
+Under 18,Male,R&B/Soul,Very important,5–6 days a week,2–3 hours,YouTube,Exercising,Calm,Often,Makes me feel emotional,Rock,R&B/Soul,4,4,3,4
+18–24,Male,Rock,Very important,3–4 days a week,1–2 hours,Spotify,"Before sleeping, Studying/working",Energetic,Always,Makes me happier,R&B/Soul,Rock,4,3,2,5
+25–34,Female,Rock,Extremely important,3–4 days a week,More than 4 hours,Spotify,"Travelling/commuting, Before sleeping, Relaxing",Motivated,Often,Helps me focus,R&B/Soul,Pop,5,3,5,4
+18–24,Male,Hip-hop/Rap,Very important,5–6 days a week,Less than 1 hour,Other,"Before sleeping, Travelling/commuting",Relaxed,Sometimes,Gives me energy,Hip-hop/Rap,Pop,4,4,1,3
+25–34,Male,Pop,Moderately important,5–6 days a week,1–2 hours,YouTube,"Before sleeping, Exercising, Relaxing",Motivated,Often,Gives me energy,Pop,Electronic/Dance,3,4,2,4
+18–24,Female,Other,Extremely important,5–6 days a week,3–4 hours,Spotify,"Studying/working, During household activities, Other",Relaxed,Always,Makes me happier,Classical,Pop,5,4,4,5
+25–34,Female,R&B/Soul,Very important,5–6 days a week,Less than 1 hour,YouTube,Socialising with friends,Energetic,Sometimes,Gives me energy,Classical,Hip-hop/Rap,4,4,1,3
+18–24,Male,R&B/Soul,Moderately important,5–6 days a week,3–4 hours,Spotify,"Other, Socialising with friends, Travelling/commuting, Before sleeping",Relaxed,Always,Makes me happier,Other,R&B/Soul,3,4,4,5
+18–24,Male,R&B/Soul,Very important,Once or twice a week,3–4 hours,YouTube,"Travelling/commuting, Socialising with friends",Motivated,Sometimes,Has little/no effect,Classical,Rock,4,2,4,3
+45–54,Female,R&B/Soul,Slightly important,Every day,1–2 hours,Other,"During household activities, Studying/working",Relaxed,Often,Gives me energy,Electronic/Dance,R&B/Soul,2,5,2,4
+18–24,Prefer not to say,Classical,Very important,Every day,Less than 1 hour,YouTube,"Before sleeping, Socialising with friends, During household activities",Motivated,Sometimes,Helps me focus,Pop,Hip-hop/Rap,4,5,1,3
+18–24,Male,Pop,Very important,5–6 days a week,3–4 hours,Spotify,Travelling/commuting,Happy,Sometimes,Helps me focus,Classical,Classical,4,4,4,3
+Under 18,Male,Hip-hop/Rap,Moderately important,Once or twice a week,1–2 hours,YouTube,"During household activities, Studying/working",Happy,Sometimes,Makes me happier,Classical,Hip-hop/Rap,3,2,2,3
+18–24,Male,Traditional/Folk,Extremely important,Every day,2–3 hours,Spotify,"Exercising, Other",Relaxed,Often,Makes me happier,R&B/Soul,Hip-hop/Rap,5,5,3,4
+45–54,Female,Rock,Very important,5–6 days a week,1–2 hours,Spotify,"During household activities, Other",Excited,Often,Helps me relax,Country,R&B/Soul,4,4,2,4
+25–34,Female,Rock,Moderately important,5–6 days a week,1–2 hours,Apple Music,"Relaxing, Exercising",Relaxed,Always,Helps me relax,Pop,Rock,3,4,2,5
+25–34,Male,Classical,Extremely important,3–4 days a week,3–4 hours,YouTube Music,During household activities,Calm,Rarely,Helps me relax,Hip-hop/Rap,Pop,5,3,4,2
+55 and above,Male,Hip-hop/Rap,Very important,Every day,2–3 hours,YouTube,"Before sleeping, Other, Socialising with friends",Sad,Always,Makes me happier,Hip-hop/Rap,R&B/Soul,4,5,3,5
+55 and above,Female,Hip-hop/Rap,Extremely important,Every day,2–3 hours,Spotify,Relaxing,Energetic,Sometimes,Helps me focus,Classical,Rock,5,5,3,3
+18–24,Female,Pop,Extremely important,Every day,1–2 hours,YouTube,"Other, Exercising, Relaxing",Happy,Often,Gives me energy,Pop,Pop,5,5,2,4
+25–34,Female,Pop,Extremely important,3–4 days a week,1–2 hours,Spotify,"Other, Travelling/commuting",Excited,Often,Makes me happier,Classical,Hip-hop/Rap,5,3,2,4
+18–24,Male,Classical,Moderately important,Every day,3–4 hours,Spotify,Exercising,Relaxed,Sometimes,Makes me happier,Classical,Rock,3,5,4,3
+25–34,Female,Hip-hop/Rap,Extremely important,Every day,3–4 hours,Apple Music,Travelling/commuting,Calm,Sometimes,Makes me happier,Pop,Hip-hop/Rap,5,5,4,3
+18–24,Female,Rock,Very important,5–6 days a week,More than 4 hours,SoundCloud,Exercising,Energetic,Sometimes,Helps me relax,R&B/Soul,Pop,4,4,5,3
+18–24,Male,R&B/Soul,Very important,5–6 days a week,2–3 hours,Apple Music,"Exercising, Studying/working",Energetic,Always,Makes me happier,Pop,Pop,4,4,3,5
+25–34,Female,R&B/Soul,Moderately important,Once or twice a week,3–4 hours,YouTube Music,"Studying/working, During household activities",Calm,Often,Other,Pop,Electronic/Dance,3,2,4,4
+18–24,Male,Electronic/Dance,Very important,Every day,3–4 hours,Spotify,"Before sleeping, During household activities, Other",Sad,Often,Gives me energy,Country,Electronic/Dance,4,5,4,4
+18–24,Female,Pop,Extremely important,3–4 days a week,2–3 hours,Other,"Travelling/commuting, Other",Motivated,Always,Has little/no effect,Other,Electronic/Dance,5,3,3,5
+25–34,Female,Country,Very important,5–6 days a week,2–3 hours,Spotify,"Other, Studying/working",Sad,Always,Makes me happier,Classical,Hip-hop/Rap,4,4,3,5
+18–24,Male,Country,Extremely important,Every day,2–3 hours,Apple Music,"Travelling/commuting, During household activities",Energetic,Sometimes,Helps me relax,Hip-hop/Rap,Hip-hop/Rap,5,5,3,3
+18–24,Female,Rock,Moderately important,Every day,Less than 1 hour,Spotify,"Other, Studying/working, During household activities",Motivated,Sometimes,Gives me energy,Other,Hip-hop/Rap,3,5,1,3
+35–44,Female,Pop,Very important,Once or twice a week,2–3 hours,YouTube,Socialising with friends,Calm,Often,Helps me relax,Pop,Pop,4,2,3,4
+18–24,Female,Rock,Not important,5–6 days a week,1–2 hours,YouTube Music,"Other, Studying/working",Happy,Rarely,Makes me feel emotional,Pop,Hip-hop/Rap,1,4,2,2
+25–34,Female,Pop,Very important,Every day,1–2 hours,YouTube,Exercising,Motivated,Often,Gives me energy,Hip-hop/Rap,Electronic/Dance,4,5,2,4
+18–24,Prefer not to say,Hip-hop/Rap,Moderately important,3–4 days a week,Less than 1 hour,YouTube,"Socialising with friends, During household activities",Motivated,Never,Makes me feel emotional,Electronic/Dance,Pop,3,3,1,1
+18–24,Female,Country,Extremely important,3–4 days a week,1–2 hours,Spotify,"Travelling/commuting, Socialising with friends",Motivated,Never,Helps me relax,Rock,Hip-hop/Rap,5,3,2,1
+18–24,Male,Rock,Extremely important,Once or twice a week,2–3 hours,Spotify,Studying/working,Motivated,Sometimes,Helps me relax,Classical,Country,5,2,3,3
+18–24,Female,Hip-hop/Rap,Moderately important,5–6 days a week,1–2 hours,YouTube Music,"During household activities, Socialising with friends",Sad,Always,Helps me focus,Pop,R&B/Soul,3,4,2,5
+Under 18,Male,Rock,Very important,3–4 days a week,3–4 hours,Apple Music,Exercising,Calm,Sometimes,Has little/no effect,Classical,Country,4,3,4,3
+18–24,Female,Hip-hop/Rap,Extremely important,Every day,Less than 1 hour,YouTube Music,Travelling/commuting,Relaxed,Always,Helps me focus,R&B/Soul,Rock,5,5,1,5
+18–24,Male,Pop,Very important,Every day,1–2 hours,YouTube,Studying/working,Happy,Often,Helps me relax,Pop,Electronic/Dance,4,5,2,4
+25–34,Male,Hip-hop/Rap,Very important,Every day,1–2 hours,Spotify,"Studying/working, Travelling/commuting",Happy,Often,Makes me happier,R&B/Soul,Electronic/Dance,4,5,2,4
+Under 18,Male,Hip-hop/Rap,Moderately important,Every day,3–4 hours,Spotify,"Other, During household activities",Calm,Often,Gives me energy,Country,Pop,3,5,4,4
+18–24,Female,Classical,Not important,3–4 days a week,3–4 hours,YouTube,"Socialising with friends, Studying/working, Travelling/commuting",Energetic,Sometimes,Gives me energy,Pop,Other,1,3,4,3
+45–54,Female,Rock,Very important,5–6 days a week,More than 4 hours,Spotify,Exercising,Sad,Sometimes,Gives me energy,Pop,R&B/Soul,4,4,5,3
+35–44,Female,Hip-hop/Rap,Extremely important,3–4 days a week,2–3 hours,Spotify,"Exercising, During household activities, Socialising with friends",Happy,Rarely,Gives me energy,Rock,Pop,5,3,3,2
+18–24,Female,Pop,Extremely important,3–4 days a week,3–4 hours,YouTube,Before sleeping,Happy,Often,Has little/no effect,R&B/Soul,Pop,5,3,4,4
+45–54,Female,R&B/Soul,Very important,Once or twice a week,Less than 1 hour,YouTube Music,Studying/working,Excited,Always,Makes me happier,Country,Hip-hop/Rap,4,2,1,5
+18–24,Female,Pop,Slightly important,Every day,2–3 hours,Spotify,"Before sleeping, Studying/working, During household activities",Motivated,Rarely,Has little/no effect,R&B/Soul,Classical,2,5,3,2
+18–24,Male,Traditional/Folk,Moderately important,5–6 days a week,1–2 hours,YouTube,"Socialising with friends, Relaxing",Relaxed,Often,Makes me happier,Rock,Pop,3,4,2,4
+55 and above,Female,Pop,Very important,Every day,2–3 hours,YouTube Music,"Before sleeping, Relaxing",Relaxed,Never,Gives me energy,Pop,Electronic/Dance,4,5,3,1
+18–24,Female,Pop,Moderately important,3–4 days a week,1–2 hours,YouTube,"Studying/working, During household activities, Travelling/commuting",Energetic,Always,Helps me relax,Traditional/Folk,Other,3,3,2,5
+18–24,Female,Hip-hop/Rap,Very important,Every day,1–2 hours,YouTube,Relaxing,Excited,Always,Other,Classical,Pop,4,5,2,5
+25–34,Male,Rock,Moderately important,Every day,3–4 hours,YouTube,Before sleeping,Happy,Sometimes,Helps me focus,Pop,Pop,3,5,4,3
+25–34,Female,R&B/Soul,Moderately important,3–4 days a week,More than 4 hours,Apple Music,"Other, Before sleeping",Relaxed,Often,Gives me energy,Electronic/Dance,R&B/Soul,3,3,5,4
+18–24,Female,Hip-hop/Rap,Moderately important,Rarely,3–4 hours,YouTube,"Studying/working, Travelling/commuting, Socialising with friends",Relaxed,Always,Gives me energy,Classical,Pop,3,1,4,5
+Under 18,Male,Hip-hop/Rap,Very important,Every day,3–4 hours,Apple Music,"Before sleeping, Relaxing, Studying/working",Relaxed,Sometimes,Makes me happier,Hip-hop/Rap,Pop,4,5,4,3
+25–34,Prefer not to say,Electronic/Dance,Very important,5–6 days a week,2–3 hours,Spotify,"Relaxing, Travelling/commuting",Energetic,Always,Makes me happier,Pop,Hip-hop/Rap,4,4,3,5
+35–44,Male,Pop,Extremely important,Every day,1–2 hours,Other,"Studying/working, Relaxing, Before sleeping",Happy,Always,Makes me happier,Pop,Pop,5,5,2,5
+45–54,Female,Classical,Moderately important,Once or twice a week,1–2 hours,YouTube,"Studying/working, Exercising",Happy,Rarely,Makes me feel emotional,Classical,Rock,3,2,2,2
+25–34,Prefer not to say,Rock,Moderately important,Every day,2–3 hours,SoundCloud,During household activities,Happy,Always,Helps me relax,R&B/Soul,Hip-hop/Rap,3,5,3,5
+18–24,Male,Classical,Slightly important,Every day,3–4 hours,YouTube,"Relaxing, Socialising with friends, Studying/working",Excited,Always,Helps me relax,Classical,Electronic/Dance,2,5,4,5
+18–24,Male,Electronic/Dance,Slightly important,5–6 days a week,2–3 hours,YouTube,"Exercising, Studying/working, Relaxing, Travelling/commuting",Motivated,Sometimes,Makes me happier,Hip-hop/Rap,Pop,2,4,3,3
+18–24,Female,Hip-hop/Rap,Very important,Every day,Less than 1 hour,YouTube,"Socialising with friends, Other",Energetic,Always,Makes me feel emotional,Classical,Rock,4,5,1,5
+18–24,Female,Country,Extremely important,Every day,2–3 hours,Spotify,Before sleeping,Excited,Sometimes,Helps me focus,Classical,Rock,5,5,3,3
+25–34,Female,Hip-hop/Rap,Very important,Every day,2–3 hours,Spotify,"Socialising with friends, Exercising",Happy,Always,Helps me relax,Rock,Rock,4,5,3,5
+18–24,Female,Country,Moderately important,Every day,2–3 hours,Spotify,"During household activities, Before sleeping",Energetic,Often,Helps me relax,Pop,Electronic/Dance,3,5,3,4
+18–24,Female,Electronic/Dance,Not important,3–4 days a week,3–4 hours,YouTube Music,Other,Happy,Sometimes,Makes me happier,R&B/Soul,Hip-hop/Rap,1,3,4,3
+18–24,Female,Pop,Extremely important,5–6 days a week,1–2 hours,Spotify,"Travelling/commuting, Exercising, Studying/working",Relaxed,Sometimes,Gives me energy,Traditional/Folk,Electronic/Dance,5,4,2,3
+25–34,Female,Electronic/Dance,Extremely important,Every day,2–3 hours,Spotify,Studying/working,Happy,Often,Has little/no effect,Classical,R&B/Soul,5,5,3,4
+18–24,Male,Hip-hop/Rap,Very important,Every day,2–3 hours,Spotify,"Before sleeping, Socialising with friends, Other, During household activities",Sad,Sometimes,Makes me happier,Pop,Other,4,5,3,3
+25–34,Female,R&B/Soul,Moderately important,5–6 days a week,1–2 hours,Spotify,"During household activities, Before sleeping, Exercising",Calm,Often,Helps me focus,Other,Hip-hop/Rap,3,4,2,4
+Under 18,Female,R&B/Soul,Moderately important,Every day,1–2 hours,YouTube,"Before sleeping, Socialising with friends, Exercising",Excited,Always,Has little/no effect,Hip-hop/Rap,Pop,3,5,2,5
+45–54,Female,R&B/Soul,Moderately important,3–4 days a week,3–4 hours,YouTube,"Before sleeping, Exercising, Socialising with friends",Relaxed,Always,Gives me energy,Electronic/Dance,Rock,3,3,4,5
+18–24,Female,Hip-hop/Rap,Moderately important,Once or twice a week,3–4 hours,Spotify,During household activities,Other,Always,Other,Pop,Electronic/Dance,3,2,4,5
+25–34,Male,R&B/Soul,Not important,3–4 days a week,3–4 hours,Spotify,"Other, During household activities, Studying/working",Happy,Often,Helps me relax,R&B/Soul,Rock,1,3,4,4
+25–34,Female,Traditional/Folk,Extremely important,5–6 days a week,Less than 1 hour,Spotify,"Relaxing, Before sleeping, Exercising",Relaxed,Rarely,Gives me energy,Rock,Pop,5,4,1,2
+25–34,Female,Hip-hop/Rap,Extremely important,Every day,1–2 hours,SoundCloud,"Relaxing, Travelling/commuting",Motivated,Always,Helps me relax,Hip-hop/Rap,Classical,5,5,2,5
+18–24,Male,Classical,Extremely important,5–6 days a week,2–3 hours,YouTube Music,"Studying/working, Before sleeping",Happy,Always,Makes me happier,Pop,Hip-hop/Rap,5,4,3,5
+25–34,Male,Classical,Not important,5–6 days a week,Less than 1 hour,YouTube,"Exercising, Relaxing",Excited,Rarely,Helps me focus,Pop,Pop,1,4,1,2
+18–24,Male,Rock,Moderately important,Every day,1–2 hours,Spotify,"Relaxing, Before sleeping",Motivated,Sometimes,Makes me happier,Classical,Electronic/Dance,3,5,2,3
+45–54,Female,Pop,Very important,Every day,2–3 hours,YouTube,"Socialising with friends, Relaxing, Studying/working, Before sleeping",Excited,Always,Makes me feel emotional,R&B/Soul,R&B/Soul,4,5,3,5
+Under 18,Male,R&B/Soul,Moderately important,Every day,More than 4 hours,Spotify,"Before sleeping, During household activities, Exercising",Happy,Sometimes,Has little/no effect,Rock,Hip-hop/Rap,3,5,5,3
+35–44,Male,Pop,Very important,Every day,3–4 hours,Spotify,"Other, During household activities, Socialising with friends",Calm,Sometimes,Helps me relax,R&B/Soul,Pop,4,5,4,3
+Under 18,Male,Pop,Moderately important,3–4 days a week,3–4 hours,Apple Music,"Relaxing, Before sleeping, Exercising",Energetic,Often,Gives me energy,R&B/Soul,Classical,3,3,4,4
+35–44,Female,Other,Slightly important,Every day,1–2 hours,YouTube Music,"Exercising, Studying/working, Relaxing",Relaxed,Sometimes,Helps me relax,Classical,Rock,2,5,2,3
+18–24,Female,Rock,Extremely important,5–6 days a week,Less than 1 hour,YouTube,"Travelling/commuting, Relaxing",Relaxed,Often,Makes me happier,Pop,Rock,5,4,1,4
+18–24,Female,Traditional/Folk,Very important,Once or twice a week,1–2 hours,YouTube,"Other, Before sleeping",Sad,Often,Makes me happier,Country,Pop,4,2,2,4
+18–24,Female,Pop,Moderately important,3–4 days a week,3–4 hours,Apple Music,Relaxing,Happy,Always,Helps me relax,R&B/Soul,Country,3,3,4,5
+Under 18,Female,Classical,Moderately important,Every day,2–3 hours,YouTube,"Other, Studying/working",Energetic,Rarely,Has little/no effect,Electronic/Dance,Rock,3,5,3,2
+25–34,Male,Hip-hop/Rap,Very important,Every day,2–3 hours,YouTube,"Relaxing, Exercising, Other, During household activities",Motivated,Often,Makes me happier,R&B/Soul,R&B/Soul,4,5,3,4
+18–24,Male,Classical,Very important,3–4 days a week,1–2 hours,Apple Music,"Exercising, Before sleeping",Sad,Always,Gives me energy,Classical,Hip-hop/Rap,4,3,2,5
+18–24,Female,Classical,Very important,Every day,2–3 hours,YouTube Music,"Studying/working, Socialising with friends",Happy,Sometimes,Makes me happier,Pop,Hip-hop/Rap,4,5,3,3
+18–24,Female,Classical,Moderately important,Every day,Less than 1 hour,YouTube Music,Relaxing,Calm,Often,Makes me happier,Country,Electronic/Dance,3,5,1,4
+18–24,Female,Classical,Extremely important,Once or twice a week,3–4 hours,Spotify,"Other, During household activities, Travelling/commuting",Motivated,Often,Helps me focus,Country,Rock,5,2,4,4
+18–24,Prefer not to say,Pop,Extremely important,Every day,Less than 1 hour,Spotify,Socialising with friends,Happy,Often,Helps me relax,R&B/Soul,R&B/Soul,5,5,1,4
+18–24,Female,R&B/Soul,Extremely important,3–4 days a week,3–4 hours,YouTube,Before sleeping,Energetic,Always,Gives me energy,Country,Pop,5,3,4,5
+18–24,Female,Classical,Moderately important,3–4 days a week,More than 4 hours,YouTube,"Studying/working, Other",Calm,Often,Has little/no effect,Classical,R&B/Soul,3,3,5,4
+18–24,Female,Hip-hop/Rap,Extremely important,Every day,1–2 hours,YouTube Music,"Studying/working, Exercising",Motivated,Sometimes,Gives me energy,Traditional/Folk,Pop,5,5,2,3
+25–34,Male,R&B/Soul,Moderately important,Every day,3–4 hours,Spotify,"During household activities, Before sleeping, Studying/working",Calm,Sometimes,Gives me energy,R&B/Soul,Pop,3,5,4,3
+Under 18,Female,Traditional/Folk,Very important,5–6 days a week,1–2 hours,Spotify,"Travelling/commuting, Socialising with friends",Happy,Often,Makes me happier,Classical,Pop,4,4,2,4
+Under 18,Female,Hip-hop/Rap,Slightly important,Every day,2–3 hours,YouTube,"Other, Travelling/commuting",Energetic,Rarely,Helps me relax,Country,Rock,2,5,3,2
+35–44,Prefer not to say,Electronic/Dance,Very important,Every day,Less than 1 hour,YouTube Music,Studying/working,Happy,Often,Gives me energy,Traditional/Folk,Hip-hop/Rap,4,5,1,4
+45–54,Female,Pop,Moderately important,Every day,1–2 hours,Spotify,"Studying/working, During household activities",Calm,Always,Gives me energy,Classical,Pop,3,5,2,5
+18–24,Female,Traditional/Folk,Very important,Every day,1–2 hours,Spotify,Relaxing,Relaxed,Often,Gives me energy,Rock,Rock,4,5,2,4
+45–54,Male,Hip-hop/Rap,Extremely important,Every day,2–3 hours,Spotify,"Before sleeping, Relaxing",Energetic,Sometimes,Helps me relax,Classical,Pop,5,5,3,3
+35–44,Male,Classical,Very important,Every day,More than 4 hours,YouTube Music,"During household activities, Other",Sad,Always,Gives me energy,Classical,Other,4,5,5,5
+18–24,Female,Classical,Moderately important,5–6 days a week,2–3 hours,YouTube,"Relaxing, During household activities",Motivated,Always,Helps me focus,Country,Pop,3,4,3,5
+25–34,Prefer not to say,Classical,Very important,5–6 days a week,1–2 hours,YouTube,Before sleeping,Happy,Often,Gives me energy,Country,Hip-hop/Rap,4,4,2,4
+55 and above,Male,Classical,Very important,Every day,3–4 hours,Spotify,"Exercising, Relaxing",Sad,Sometimes,Helps me focus,Electronic/Dance,Rock,4,5,4,3
+18–24,Female,Rock,Very important,Every day,2–3 hours,Spotify,Travelling/commuting,Energetic,Sometimes,Makes me happier,Pop,Rock,4,5,3,3
+35–44,Female,Rock,Very important,3–4 days a week,1–2 hours,YouTube Music,Studying/working,Happy,Often,Makes me happier,Classical,Electronic/Dance,4,3,2,4
+45–54,Female,Hip-hop/Rap,Extremely important,Every day,3–4 hours,Apple Music,"Travelling/commuting, Other, Relaxing",Sad,Often,Gives me energy,Hip-hop/Rap,Hip-hop/Rap,5,5,4,4
+25–34,Male,Classical,Moderately important,5–6 days a week,2–3 hours,Spotify,"Travelling/commuting, Studying/working",Happy,Always,Gives me energy,R&B/Soul,Pop,3,4,3,5
+18–24,Female,R&B/Soul,Extremely important,Once or twice a week,2–3 hours,SoundCloud,"Studying/working, During household activities",Calm,Often,Helps me relax,Electronic/Dance,R&B/Soul,5,2,3,4
+18–24,Female,Traditional/Folk,Extremely important,5–6 days a week,2–3 hours,Spotify,"Travelling/commuting, Exercising, Socialising with friends",Excited,Sometimes,Makes me happier,Classical,Country,5,4,3,3
+Under 18,Female,Classical,Moderately important,5–6 days a week,1–2 hours,YouTube,During household activities,Energetic,Often,Other,R&B/Soul,Pop,3,4,2,4
+18–24,Female,Hip-hop/Rap,Moderately important,5–6 days a week,3–4 hours,Apple Music,"Travelling/commuting, Before sleeping, Other",Energetic,Often,Makes me happier,Hip-hop/Rap,Hip-hop/Rap,3,4,4,4
+18–24,Female,Country,Extremely important,5–6 days a week,2–3 hours,Spotify,Before sleeping,Happy,Never,Helps me relax,Other,R&B/Soul,5,4,3,1
+45–54,Female,R&B/Soul,Very important,3–4 days a week,2–3 hours,YouTube Music,Studying/working,Excited,Often,Helps me focus,Classical,R&B/Soul,4,3,3,4
+Under 18,Male,Hip-hop/Rap,Very important,5–6 days a week,1–2 hours,Spotify,"Travelling/commuting, Socialising with friends",Relaxed,Always,Has little/no effect,R&B/Soul,Traditional/Folk,4,4,2,5
+18–24,Male,Pop,Moderately important,5–6 days a week,2–3 hours,YouTube,"Travelling/commuting, During household activities",Energetic,Sometimes,Gives me energy,Country,Hip-hop/Rap,3,4,3,3
+25–34,Female,Traditional/Folk,Very important,5–6 days a week,2–3 hours,Spotify,Travelling/commuting,Relaxed,Always,Makes me happier,Classical,Electronic/Dance,4,4,3,5
+Under 18,Female,Pop,Slightly important,Every day,3–4 hours,Spotify,"Other, Exercising, During household activities",Happy,Often,Makes me happier,Classical,Electronic/Dance,2,5,4,4
+25–34,Female,Pop,Moderately important,3–4 days a week,2–3 hours,Spotify,Travelling/commuting,Calm,Often,Gives me energy,Country,Rock,3,3,3,4
+18–24,Female,Electronic/Dance,Very important,3–4 days a week,1–2 hours,YouTube Music,"During household activities, Travelling/commuting",Calm,Rarely,Gives me energy,R&B/Soul,Electronic/Dance,4,3,2,2
+35–44,Female,Rock,Moderately important,5–6 days a week,1–2 hours,Spotify,"During household activities, Socialising with friends",Happy,Sometimes,Has little/no effect,Hip-hop/Rap,Hip-hop/Rap,3,4,2,3
+18–24,Male,Hip-hop/Rap,Extremely important,5–6 days a week,1–2 hours,YouTube,"Relaxing, During household activities",Happy,Sometimes,Makes me happier,R&B/Soul,Hip-hop/Rap,5,4,2,3
+18–24,Female,Other,Extremely important,5–6 days a week,3–4 hours,YouTube Music,"Studying/working, Relaxing",Happy,Sometimes,Makes me happier,Hip-hop/Rap,Electronic/Dance,5,4,4,3
+18–24,Female,Traditional/Folk,Moderately important,Rarely,1–2 hours,YouTube Music,"Relaxing, Socialising with friends, During household activities, Before sleeping",Happy,Always,Helps me relax,Classical,Rock,3,1,2,5
+25–34,Male,Traditional/Folk,Extremely important,Every day,More than 4 hours,YouTube,"During household activities, Other",Motivated,Rarely,Helps me relax,Rock,R&B/Soul,5,5,5,2
+18–24,Female,Country,Extremely important,Every day,2–3 hours,YouTube,Studying/working,Happy,Sometimes,Helps me relax,Classical,Country,5,5,3,3
+Under 18,Female,Rock,Slightly important,Every day,2–3 hours,Other,Exercising,Happy,Always,Helps me relax,Hip-hop/Rap,Classical,2,5,3,5
+35–44,Male,Classical,Extremely important,3–4 days a week,2–3 hours,Other,"Socialising with friends, Other",Energetic,Always,Helps me focus,Pop,Rock,5,3,3,5
+25–34,Female,Traditional/Folk,Very important,3–4 days a week,Less than 1 hour,Spotify,"Exercising, Other",Happy,Often,Helps me focus,Pop,Hip-hop/Rap,4,3,1,4
+18–24,Female,Country,Very important,Every day,2–3 hours,Spotify,"During household activities, Relaxing, Travelling/commuting",Happy,Often,Helps me relax,R&B/Soul,Hip-hop/Rap,4,5,3,4
+35–44,Female,Hip-hop/Rap,Extremely important,Every day,2–3 hours,YouTube Music,Socialising with friends,Happy,Often,Gives me energy,Classical,Rock,5,5,3,4
+55 and above,Male,Other,Moderately important,Once or twice a week,2–3 hours,Spotify,Studying/working,Energetic,Sometimes,Helps me relax,Country,Other,3,2,3,3
+35–44,Female,Pop,Extremely important,Once or twice a week,2–3 hours,Spotify,"During household activities, Other, Studying/working",Happy,Often,Helps me relax,Country,Hip-hop/Rap,5,2,3,4
+25–34,Male,Classical,Moderately important,5–6 days a week,More than 4 hours,SoundCloud,Studying/working,Calm,Often,Makes me happier,R&B/Soul,Hip-hop/Rap,3,4,5,4
+18–24,Male,Pop,Extremely important,5–6 days a week,1–2 hours,Spotify,"Other, Before sleeping, Socialising with friends, Travelling/commuting",Relaxed,Rarely,Makes me happier,Pop,R&B/Soul,5,4,2,2
+25–34,Female,Country,Moderately important,3–4 days a week,More than 4 hours,YouTube Music,"Other, Before sleeping, Travelling/commuting",Happy,Sometimes,Helps me focus,Hip-hop/Rap,Pop,3,3,5,3
+18–24,Female,R&B/Soul,Very important,3–4 days a week,2–3 hours,YouTube Music,"Exercising, Studying/working",Energetic,Often,Makes me feel emotional,Classical,Hip-hop/Rap,4,3,3,4
+18–24,Male,Electronic/Dance,Extremely important,3–4 days a week,3–4 hours,YouTube,"During household activities, Travelling/commuting",Energetic,Often,Gives me energy,Classical,Hip-hop/Rap,5,3,4,4
+18–24,Male,Electronic/Dance,Moderately important,Every day,1–2 hours,YouTube,During household activities,Sad,Often,Helps me focus,Hip-hop/Rap,Hip-hop/Rap,3,5,2,4
+25–34,Female,Electronic/Dance,Very important,Every day,1–2 hours,Apple Music,"Before sleeping, During household activities, Other",Happy,Often,Gives me energy,Classical,Electronic/Dance,4,5,2,4
+Under 18,Male,Hip-hop/Rap,Moderately important,Every day,2–3 hours,SoundCloud,"During household activities, Before sleeping",Happy,Often,Helps me relax,R&B/Soul,R&B/Soul,3,5,3,4
+18–24,Female,R&B/Soul,Very important,5–6 days a week,More than 4 hours,SoundCloud,"Before sleeping, During household activities",Relaxed,Often,Helps me relax,Classical,Rock,4,4,5,4
+25–34,Female,Hip-hop/Rap,Extremely important,5–6 days a week,1–2 hours,Apple Music,"Studying/working, Socialising with friends, Travelling/commuting, Exercising",Happy,Always,Makes me happier,Rock,Country,5,4,2,5
+18–24,Female,Pop,Slightly important,5–6 days a week,1–2 hours,YouTube,"Relaxing, Exercising",Excited,Rarely,Helps me relax,Traditional/Folk,Classical,2,4,2,2
+18–24,Female,Classical,Extremely important,Once or twice a week,2–3 hours,Spotify,"During household activities, Studying/working, Other",Motivated,Sometimes,Has little/no effect,R&B/Soul,Electronic/Dance,5,2,3,3
+25–34,Female,Pop,Very important,3–4 days a week,2–3 hours,YouTube,"Exercising, Studying/working",Calm,Always,Other,Country,Rock,4,3,3,5
+25–34,Male,Hip-hop/Rap,Very important,Every day,2–3 hours,Spotify,"During household activities, Other",Calm,Often,Gives me energy,Hip-hop/Rap,Hip-hop/Rap,4,5,3,4
+55 and above,Female,Pop,Moderately important,5–6 days a week,2–3 hours,YouTube,During household activities,Energetic,Sometimes,Helps me relax,Classical,Pop,3,4,3,3
+35–44,Female,R&B/Soul,Very important,Every day,1–2 hours,Apple Music,Travelling/commuting,Happy,Rarely,Has little/no effect,Traditional/Folk,Electronic/Dance,4,5,2,2
+25–34,Male,Rock,Not important,3–4 days a week,2–3 hours,Spotify,"Socialising with friends, Other",Energetic,Often,Makes me happier,Classical,Pop,1,3,3,4
+18–24,Male,Country,Very important,Once or twice a week,2–3 hours,Spotify,"Socialising with friends, Before sleeping",Excited,Often,Has little/no effect,Pop,Electronic/Dance,4,2,3,4
+18–24,Female,Traditional/Folk,Very important,5–6 days a week,Less than 1 hour,Spotify,"Studying/working, Other, Travelling/commuting, Socialising with friends",Relaxed,Often,Helps me focus,Pop,R&B/Soul,4,4,1,4
+18–24,Male,Hip-hop/Rap,Very important,Every day,More than 4 hours,SoundCloud,"Relaxing, Travelling/commuting, Exercising",Motivated,Often,Makes me happier,R&B/Soul,Traditional/Folk,4,5,5,4
+18–24,Male,Hip-hop/Rap,Very important,5–6 days a week,1–2 hours,YouTube,"Relaxing, During household activities",Happy,Often,Has little/no effect,Traditional/Folk,Hip-hop/Rap,4,4,2,4
+18–24,Female,Traditional/Folk,Moderately important,3–4 days a week,3–4 hours,Apple Music,"During household activities, Relaxing, Exercising",Energetic,Always,Has little/no effect,Traditional/Folk,Hip-hop/Rap,3,3,4,5
+18–24,Female,R&B/Soul,Moderately important,5–6 days a week,1–2 hours,Spotify,"Before sleeping, Studying/working",Calm,Often,Gives me energy,Classical,Classical,3,4,2,4
+18–24,Male,Pop,Very important,Every day,More than 4 hours,Other,Relaxing,Calm,Rarely,Has little/no effect,Other,Electronic/Dance,4,5,5,2
+18–24,Female,R&B/Soul,Extremely important,Every day,1–2 hours,SoundCloud,"Studying/working, Socialising with friends",Happy,Often,Has little/no effect,Electronic/Dance,Pop,5,5,2,4
+18–24,Female,Traditional/Folk,Moderately important,5–6 days a week,More than 4 hours,YouTube Music,Exercising,Energetic,Often,Makes me happier,Classical,Pop,3,4,5,4
+18–24,Male,R&B/Soul,Extremely important,5–6 days a week,1–2 hours,YouTube,Other,Sad,Often,Makes me happier,R&B/Soul,Hip-hop/Rap,5,4,2,4
+Under 18,Male,Hip-hop/Rap,Very important,5–6 days a week,3–4 hours,YouTube,"During household activities, Socialising with friends, Relaxing",Happy,Sometimes,Helps me relax,Electronic/Dance,Electronic/Dance,4,4,4,3
+Under 18,Male,Classical,Extremely important,3–4 days a week,1–2 hours,SoundCloud,"Studying/working, Socialising with friends, Exercising, Other",Energetic,Always,Gives me energy,Pop,Electronic/Dance,5,3,2,5
+18–24,Male,Pop,Very important,3–4 days a week,2–3 hours,YouTube,"Relaxing, Studying/working",Happy,Rarely,Helps me relax,Pop,Pop,4,3,3,2
+45–54,Male,Hip-hop/Rap,Moderately important,Every day,2–3 hours,Apple Music,"Exercising, Relaxing",Calm,Sometimes,Makes me happier,Country,Hip-hop/Rap,3,5,3,3
+35–44,Male,Rock,Moderately important,Every day,1–2 hours,YouTube,Relaxing,Sad,Rarely,Helps me focus,Classical,Other,3,5,2,2
+25–34,Male,Rock,Extremely important,5–6 days a week,1–2 hours,YouTube,"Other, Relaxing",Excited,Always,Makes me happier,Rock,Pop,5,4,2,5
+25–34,Female,Pop,Very important,5–6 days a week,Less than 1 hour,YouTube,"Relaxing, Studying/working, Before sleeping",Happy,Sometimes,Makes me feel emotional,Rock,Rock,4,4,1,3
+18–24,Male,R&B/Soul,Extremely important,Every day,1–2 hours,YouTube Music,"Other, Relaxing, Studying/working",Sad,Often,Helps me focus,Traditional/Folk,Rock,5,5,2,4
+Under 18,Female,R&B/Soul,Very important,5–6 days a week,Less than 1 hour,YouTube,"Before sleeping, Studying/working",Motivated,Sometimes,Makes me happier,Other,R&B/Soul,4,4,1,3
+18–24,Female,Electronic/Dance,Extremely important,Every day,1–2 hours,Spotify,"Other, Travelling/commuting",Relaxed,Always,Helps me relax,Classical,Pop,5,5,2,5
+18–24,Male,Rock,Very important,3–4 days a week,More than 4 hours,Apple Music,"Before sleeping, Travelling/commuting",Calm,Rarely,Other,Classical,Other,4,3,5,2
+25–34,Female,Pop,Extremely important,Every day,2–3 hours,Spotify,"Studying/working, Other",Energetic,Often,Helps me relax,Classical,Hip-hop/Rap,5,5,3,4
+18–24,Male,Hip-hop/Rap,Very important,Once or twice a week,1–2 hours,Spotify,Travelling/commuting,Happy,Sometimes,Helps me relax,Pop,R&B/Soul,4,2,2,3
+Under 18,Female,Hip-hop/Rap,Very important,Once or twice a week,2–3 hours,Apple Music,Studying/working,Happy,Sometimes,Helps me focus,Traditional/Folk,R&B/Soul,4,2,3,3
+18–24,Male,Country,Extremely important,Once or twice a week,More than 4 hours,YouTube Music,"Travelling/commuting, During household activities",Excited,Often,Makes me happier,Rock,R&B/Soul,5,2,5,4
+45–54,Male,Traditional/Folk,Moderately important,5–6 days a week,1–2 hours,SoundCloud,"Before sleeping, Relaxing",Energetic,Rarely,Makes me happier,R&B/Soul,Electronic/Dance,3,4,2,2
+18–24,Male,Electronic/Dance,Extremely important,3–4 days a week,2–3 hours,YouTube Music,"During household activities, Socialising with friends",Relaxed,Often,Gives me energy,Other,Hip-hop/Rap,5,3,3,4
+25–34,Male,Country,Very important,3–4 days a week,2–3 hours,Spotify,"Other, Studying/working, Socialising with friends",Sad,Sometimes,Makes me happier,R&B/Soul,Hip-hop/Rap,4,3,3,3
+25–34,Female,Electronic/Dance,Moderately important,Every day,Less than 1 hour,Spotify,Studying/working,Calm,Often,Gives me energy,Rock,R&B/Soul,3,5,1,4
+35–44,Male,Country,Very important,Every day,More than 4 hours,Apple Music,"Travelling/commuting, Socialising with friends, Studying/working",Sad,Often,Makes me feel emotional,Electronic/Dance,Pop,4,5,5,4
+25–34,Female,Hip-hop/Rap,Extremely important,Every day,1–2 hours,Apple Music,"Before sleeping, Other",Relaxed,Sometimes,Gives me energy,Classical,Rock,5,5,2,3
+35–44,Male,Other,Very important,Once or twice a week,Less than 1 hour,Spotify,"Other, Before sleeping, Relaxing",Motivated,Rarely,Makes me happier,Country,Electronic/Dance,4,2,1,2
+18–24,Female,R&B/Soul,Very important,5–6 days a week,1–2 hours,YouTube,"Relaxing, Before sleeping",Energetic,Sometimes,Gives me energy,R&B/Soul,Traditional/Folk,4,4,2,3
+18–24,Prefer not to say,Pop,Extremely important,5–6 days a week,3–4 hours,Apple Music,Travelling/commuting,Energetic,Often,Helps me relax,Classical,R&B/Soul,5,4,4,4
+18–24,Male,Hip-hop/Rap,Extremely important,5–6 days a week,2–3 hours,YouTube,"During household activities, Exercising, Other",Relaxed,Never,Has little/no effect,Classical,Classical,5,4,3,1
+18–24,Male,Pop,Extremely important,Every day,2–3 hours,Spotify,Travelling/commuting,Excited,Sometimes,Makes me happier,Rock,Electronic/Dance,5,5,3,3
+45–54,Female,R&B/Soul,Very important,3–4 days a week,3–4 hours,Spotify,Studying/working,Relaxed,Rarely,Makes me happier,Traditional/Folk,Pop,4,3,4,2
+25–34,Female,Pop,Very important,Every day,Less than 1 hour,Spotify,"Studying/working, Travelling/commuting, Relaxing",Relaxed,Sometimes,Helps me focus,Country,Rock,4,5,1,3
+18–24,Female,Pop,Extremely important,5–6 days a week,2–3 hours,Other,"Studying/working, Other",Motivated,Often,Has little/no effect,R&B/Soul,Electronic/Dance,5,4,3,4
+18–24,Male,R&B/Soul,Very important,Every day,3–4 hours,Apple Music,"Relaxing, Socialising with friends",Relaxed,Often,Makes me happier,Classical,R&B/Soul,4,5,4,4
+Under 18,Male,Rock,Moderately important,3–4 days a week,1–2 hours,Spotify,Relaxing,Motivated,Often,Helps me focus,Pop,Electronic/Dance,3,3,2,4
+35–44,Female,Hip-hop/Rap,Very important,Every day,2–3 hours,SoundCloud,During household activities,Calm,Often,Helps me focus,Hip-hop/Rap,Country,4,5,3,4
+18–24,Male,Traditional/Folk,Moderately important,5–6 days a week,2–3 hours,SoundCloud,"Exercising, Before sleeping",Energetic,Sometimes,Helps me focus,Hip-hop/Rap,R&B/Soul,3,4,3,3
+Under 18,Male,Classical,Extremely important,Rarely,2–3 hours,YouTube,Studying/working,Calm,Sometimes,Helps me focus,Traditional/Folk,Rock,5,1,3,3
+18–24,Female,Electronic/Dance,Slightly important,3–4 days a week,1–2 hours,Apple Music,"Travelling/commuting, Socialising with friends, During household activities",Motivated,Sometimes,Helps me focus,R&B/Soul,R&B/Soul,2,3,2,3
+35–44,Male,Electronic/Dance,Extremely important,3–4 days a week,1–2 hours,YouTube,"Relaxing, Exercising, Before sleeping, Other",Motivated,Often,Helps me relax,Pop,R&B/Soul,5,3,2,4
+18–24,Female,R&B/Soul,Very important,Once or twice a week,2–3 hours,Spotify,"Other, Studying/working",Happy,Rarely,Makes me feel emotional,Pop,Pop,4,2,3,2
+35–44,Female,Country,Moderately important,Once or twice a week,3–4 hours,YouTube,Studying/working,Happy,Often,Makes me happier,Classical,Electronic/Dance,3,2,4,4
+18–24,Female,Electronic/Dance,Slightly important,5–6 days a week,3–4 hours,Spotify,"During household activities, Exercising, Before sleeping",Calm,Sometimes,Other,Classical,Pop,2,4,4,3
+18–24,Male,Hip-hop/Rap,Extremely important,3–4 days a week,1–2 hours,Spotify,Studying/working,Happy,Always,Helps me focus,R&B/Soul,Pop,5,3,2,5
+Under 18,Female,Classical,Very important,3–4 days a week,2–3 hours,YouTube Music,"Exercising, Travelling/commuting",Happy,Sometimes,Gives me energy,Hip-hop/Rap,Pop,4,3,3,3
+25–34,Female,Pop,Extremely important,3–4 days a week,2–3 hours,YouTube,Travelling/commuting,Sad,Always,Other,Classical,Hip-hop/Rap,5,3,3,5
+18–24,Female,Classical,Extremely important,5–6 days a week,1–2 hours,Apple Music,Before sleeping,Relaxed,Often,Helps me relax,Country,Country,5,4,2,4
+18–24,Female,Rock,Moderately important,Every day,3–4 hours,YouTube,"Relaxing, Before sleeping",Calm,Sometimes,Helps me focus,Rock,Pop,3,5,4,3
+35–44,Male,R&B/Soul,Slightly important,5–6 days a week,1–2 hours,YouTube,Before sleeping,Happy,Often,Helps me focus,Other,Pop,2,4,2,4
+18–24,Male,Rock,Very important,Every day,1–2 hours,Spotify,Exercising,Energetic,Often,Makes me happier,R&B/Soul,Rock,4,5,2,4
+35–44,Male,Classical,Extremely important,3–4 days a week,1–2 hours,YouTube,"Exercising, Socialising with friends, Studying/working",Relaxed,Rarely,Other,Classical,Rock,5,3,2,2
+35–44,Female,Pop,Very important,Once or twice a week,3–4 hours,Apple Music,"Relaxing, Travelling/commuting",Relaxed,Sometimes,Other,Pop,R&B/Soul,4,2,4,3
+18–24,Prefer not to say,Rock,Moderately important,Every day,1–2 hours,YouTube Music,"Studying/working, During household activities",Sad,Sometimes,Helps me focus,Classical,Hip-hop/Rap,3,5,2,3
+25–34,Female,Pop,Extremely important,Every day,Less than 1 hour,SoundCloud,"Studying/working, Other",Relaxed,Often,Makes me happier,R&B/Soul,R&B/Soul,5,5,1,4
+25–34,Male,Hip-hop/Rap,Very important,Every day,3–4 hours,Apple Music,"Relaxing, During household activities, Before sleeping",Calm,Sometimes,Has little/no effect,Classical,Hip-hop/Rap,4,5,4,3
+18–24,Female,Electronic/Dance,Very important,5–6 days a week,3–4 hours,SoundCloud,"Before sleeping, During household activities",Calm,Often,Other,Electronic/Dance,Pop,4,4,4,4
+18–24,Male,Traditional/Folk,Slightly important,3–4 days a week,Less than 1 hour,Spotify,Relaxing,Energetic,Often,Helps me relax,Traditional/Folk,Rock,2,3,1,4
+18–24,Female,Hip-hop/Rap,Slightly important,Every day,1–2 hours,SoundCloud,"During household activities, Socialising with friends",Relaxed,Often,Helps me relax,Classical,R&B/Soul,2,5,2,4
+18–24,Male,Country,Moderately important,3–4 days a week,2–3 hours,Other,"Studying/working, Travelling/commuting, Exercising",Relaxed,Always,Gives me energy,Pop,Rock,3,3,3,5
+18–24,Male,Hip-hop/Rap,Moderately important,3–4 days a week,1–2 hours,YouTube,Before sleeping,Motivated,Sometimes,Gives me energy,Other,Rock,3,3,2,3
+25–34,Female,Traditional/Folk,Moderately important,Every day,2–3 hours,YouTube,"Socialising with friends, Relaxing",Motivated,Always,Helps me focus,Other,R&B/Soul,3,5,3,5
+25–34,Female,Traditional/Folk,Moderately important,5–6 days a week,1–2 hours,YouTube,"Other, Exercising, Studying/working",Relaxed,Often,Makes me happier,Classical,Country,3,4,2,4
+Under 18,Female,Classical,Extremely important,Every day,1–2 hours,YouTube,"Studying/working, Before sleeping",Relaxed,Sometimes,Makes me feel emotional,R&B/Soul,Hip-hop/Rap,5,5,2,3
+55 and above,Female,Pop,Very important,5–6 days a week,More than 4 hours,YouTube Music,During household activities,Calm,Sometimes,Makes me feel emotional,Classical,Pop,4,4,5,3
+Under 18,Prefer not to say,Country,Slightly important,5–6 days a week,More than 4 hours,YouTube,"Exercising, Travelling/commuting",Happy,Sometimes,Gives me energy,Pop,Electronic/Dance,2,4,5,3
+18–24,Male,Pop,Not important,3–4 days a week,More than 4 hours,YouTube Music,"Socialising with friends, Relaxing",Happy,Always,Helps me focus,Pop,Country,1,3,5,5
+18–24,Female,Rock,Moderately important,Every day,More than 4 hours,YouTube Music,"Studying/working, During household activities",Relaxed,Often,Makes me happier,R&B/Soul,R&B/Soul,3,5,5,4
+18–24,Female,Traditional/Folk,Slightly important,3–4 days a week,2–3 hours,Spotify,Exercising,Calm,Often,Makes me happier,Rock,Hip-hop/Rap,2,3,3,4
+25–34,Male,R&B/Soul,Very important,3–4 days a week,1–2 hours,Spotify,"During household activities, Exercising, Travelling/commuting",Happy,Sometimes,Makes me happier,Hip-hop/Rap,Electronic/Dance,4,3,2,3
+18–24,Female,Pop,Very important,Once or twice a week,3–4 hours,SoundCloud,"Socialising with friends, Before sleeping",Relaxed,Always,Has little/no effect,Classical,Country,4,2,4,5
+25–34,Male,Pop,Very important,Every day,1–2 hours,Spotify,"During household activities, Before sleeping, Studying/working, Other",Happy,Often,Helps me relax,Hip-hop/Rap,Pop,4,5,2,4
+18–24,Female,Pop,Moderately important,Rarely,Less than 1 hour,Spotify,"Relaxing, Travelling/commuting",Calm,Never,Makes me happier,Classical,Hip-hop/Rap,3,1,1,1
+35–44,Female,R&B/Soul,Very important,Once or twice a week,3–4 hours,YouTube Music,"Relaxing, Exercising",Happy,Often,Makes me happier,Classical,Electronic/Dance,4,2,4,4
+25–34,Male,Classical,Slightly important,Every day,More than 4 hours,YouTube,"During household activities, Studying/working",Calm,Sometimes,Gives me energy,Classical,Rock,2,5,5,3
+Under 18,Male,Pop,Moderately important,Every day,1–2 hours,Other,"During household activities, Exercising",Other,Often,Makes me feel emotional,Traditional/Folk,Electronic/Dance,3,5,2,4
+55 and above,Female,Pop,Very important,Every day,Less than 1 hour,Spotify,"Travelling/commuting, Before sleeping",Motivated,Always,Makes me happier,Other,Hip-hop/Rap,4,5,1,5
+35–44,Female,Hip-hop/Rap,Very important,5–6 days a week,1–2 hours,YouTube Music,"During household activities, Exercising",Energetic,Often,Helps me relax,R&B/Soul,Hip-hop/Rap,4,4,2,4
+18–24,Female,R&B/Soul,Moderately important,Once or twice a week,Less than 1 hour,Spotify,"Exercising, Relaxing",Sad,Sometimes,Helps me relax,Classical,Country,3,2,1,3
+18–24,Female,Rock,Moderately important,5–6 days a week,3–4 hours,YouTube,"Studying/working, Relaxing, Other, During household activities",Energetic,Always,Gives me energy,Pop,Pop,3,4,4,5
+18–24,Male,Hip-hop/Rap,Extremely important,5–6 days a week,2–3 hours,YouTube,"Other, Relaxing",Energetic,Sometimes,Makes me happier,Rock,Rock,5,4,3,3
+18–24,Male,Pop,Extremely important,5–6 days a week,3–4 hours,Spotify,"Before sleeping, Relaxing, Studying/working",Energetic,Always,Helps me relax,Pop,Pop,5,4,4,5
+45–54,Male,Hip-hop/Rap,Moderately important,Rarely,1–2 hours,YouTube,"During household activities, Exercising, Studying/working",Calm,Often,Other,R&B/Soul,Hip-hop/Rap,3,1,2,4
+25–34,Male,Rock,Extremely important,Every day,1–2 hours,Spotify,"Relaxing, Other, Before sleeping, Studying/working",Excited,Often,Helps me relax,Pop,Other,5,5,2,4
+35–44,Male,Hip-hop/Rap,Slightly important,Every day,2–3 hours,Spotify,"Socialising with friends, Other, Exercising",Energetic,Often,Makes me happier,R&B/Soul,R&B/Soul,2,5,3,4
+25–34,Female,Pop,Very important,Every day,3–4 hours,SoundCloud,During household activities,Motivated,Often,Makes me happier,Hip-hop/Rap,Hip-hop/Rap,4,5,4,4
+18–24,Female,Traditional/Folk,Very important,Every day,1–2 hours,Spotify,Relaxing,Relaxed,Rarely,Makes me happier,Hip-hop/Rap,Electronic/Dance,4,5,2,2
+18–24,Female,Pop,Moderately important,Rarely,3–4 hours,Spotify,"Studying/working, Before sleeping",Energetic,Never,Makes me feel emotional,Pop,Rock,3,1,4,1
+25–34,Female,Hip-hop/Rap,Extremely important,Every day,1–2 hours,YouTube,"Travelling/commuting, Socialising with friends",Calm,Often,Helps me focus,Classical,Rock,5,5,2,4
+25–34,Male,Electronic/Dance,Extremely important,Every day,3–4 hours,SoundCloud,Travelling/commuting,Happy,Always,Helps me relax,Hip-hop/Rap,Rock,5,5,4,5
+45–54,Male,Rock,Very important,Every day,3–4 hours,SoundCloud,"Before sleeping, During household activities",Relaxed,Often,Has little/no effect,Pop,Classical,4,5,4,4
+18–24,Male,Traditional/Folk,Very important,Every day,1–2 hours,YouTube Music,"During household activities, Studying/working, Relaxing",Motivated,Always,Helps me relax,Traditional/Folk,Country,4,5,2,5
+25–34,Female,Country,Very important,Rarely,3–4 hours,YouTube Music,"Other, Before sleeping, Relaxing",Motivated,Sometimes,Helps me relax,Traditional/Folk,Pop,4,1,4,3
+18–24,Female,Electronic/Dance,Extremely important,5–6 days a week,Less than 1 hour,Spotify,"Other, During household activities",Sad,Never,Makes me happier,Rock,Rock,5,4,1,1
+25–34,Female,R&B/Soul,Moderately important,5–6 days a week,2–3 hours,SoundCloud,"Exercising, Other",Happy,Often,Helps me relax,Rock,Pop,3,4,3,4
+45–54,Female,Pop,Extremely important,Every day,2–3 hours,YouTube,"Other, Travelling/commuting, Exercising",Calm,Sometimes,Helps me relax,R&B/Soul,Hip-hop/Rap,5,5,3,3
+Under 18,Female,Rock,Extremely important,5–6 days a week,2–3 hours,Spotify,"Relaxing, During household activities",Excited,Sometimes,Helps me focus,R&B/Soul,Hip-hop/Rap,5,4,3,3
+25–34,Male,Pop,Extremely important,Rarely,More than 4 hours,Spotify,"Relaxing, Exercising",Sad,Often,Makes me happier,R&B/Soul,Electronic/Dance,5,1,5,4
+18–24,Male,R&B/Soul,Slightly important,5–6 days a week,Less than 1 hour,SoundCloud,"Before sleeping, Socialising with friends",Motivated,Always,Gives me energy,Classical,Pop,2,4,1,5
+55 and above,Female,Pop,Extremely important,Once or twice a week,1–2 hours,Spotify,"Before sleeping, Relaxing",Happy,Sometimes,Gives me energy,Pop,Pop,5,2,2,3
+25–34,Female,Hip-hop/Rap,Extremely important,Every day,3–4 hours,Spotify,"Exercising, Other",Calm,Often,Has little/no effect,Classical,Electronic/Dance,5,5,4,4
+18–24,Male,Pop,Moderately important,Every day,2–3 hours,Other,"Studying/working, Relaxing, Exercising",Other,Often,Gives me energy,Pop,Classical,3,5,3,4
+18–24,Male,Electronic/Dance,Extremely important,Every day,2–3 hours,Apple Music,Studying/working,Energetic,Often,Helps me relax,Pop,Country,5,5,3,4
+18–24,Prefer not to say,Pop,Very important,Every day,Less than 1 hour,YouTube,Other,Excited,Often,Gives me energy,Traditional/Folk,Rock,4,5,1,4
+25–34,Male,Traditional/Folk,Extremely important,Every day,3–4 hours,Spotify,"Socialising with friends, Exercising, Studying/working",Calm,Often,Gives me energy,Pop,Hip-hop/Rap,5,5,4,4
+35–44,Male,Country,Moderately important,Every day,2–3 hours,Spotify,"During household activities, Before sleeping",Excited,Sometimes,Helps me focus,Pop,R&B/Soul,3,5,3,3
+18–24,Female,Rock,Very important,5–6 days a week,3–4 hours,YouTube Music,"During household activities, Before sleeping",Energetic,Rarely,Helps me relax,R&B/Soul,Pop,4,4,4,2
+25–34,Female,Hip-hop/Rap,Very important,Every day,2–3 hours,Spotify,Socialising with friends,Excited,Often,Helps me relax,Pop,Pop,4,5,3,4
+18–24,Male,Classical,Very important,3–4 days a week,1–2 hours,Spotify,"Travelling/commuting, Before sleeping",Calm,Sometimes,Makes me happier,R&B/Soul,Pop,4,3,2,3
+25–34,Female,Rock,Extremely important,5–6 days a week,More than 4 hours,YouTube Music,Travelling/commuting,Calm,Often,Has little/no effect,Pop,Rock,5,4,5,4
+18–24,Male,Classical,Extremely important,Every day,2–3 hours,YouTube,"Before sleeping, Other",Calm,Often,Helps me relax,Rock,Pop,5,5,3,4
+25–34,Male,Pop,Very important,3–4 days a week,1–2 hours,YouTube Music,"Relaxing, Studying/working, Exercising",Calm,Sometimes,Helps me relax,Pop,Electronic/Dance,4,3,2,3
+Under 18,Male,Pop,Moderately important,Every day,1–2 hours,YouTube,During household activities,Motivated,Always,Helps me focus,Classical,Rock,3,5,2,5
+18–24,Female,R&B/Soul,Very important,Every day,2–3 hours,Apple Music,"During household activities, Socialising with friends",Relaxed,Rarely,Has little/no effect,R&B/Soul,Rock,4,5,3,2
+25–34,Male,Hip-hop/Rap,Moderately important,5–6 days a week,1–2 hours,Spotify,"Before sleeping, Socialising with friends, Other",Sad,Rarely,Helps me relax,Classical,Traditional/Folk,3,4,2,2
+25–34,Male,Country,Very important,Once or twice a week,1–2 hours,YouTube,During household activities,Motivated,Often,Makes me happier,Classical,Other,4,2,2,4
+18–24,Female,Traditional/Folk,Slightly important,Once or twice a week,2–3 hours,YouTube,Relaxing,Energetic,Always,Makes me feel emotional,Country,Country,2,2,3,5
+35–44,Female,Pop,Slightly important,Every day,3–4 hours,Other,"Travelling/commuting, During household activities, Socialising with friends",Sad,Always,Makes me happier,Classical,Rock,2,5,4,5
+18–24,Male,Rock,Very important,Every day,Less than 1 hour,YouTube,"Exercising, Studying/working",Excited,Often,Helps me relax,Country,Pop,4,5,1,4
+18–24,Male,Hip-hop/Rap,Extremely important,5–6 days a week,2–3 hours,Spotify,"During household activities, Other, Travelling/commuting",Happy,Often,Has little/no effect,Traditional/Folk,Traditional/Folk,5,4,3,4
+18–24,Male,Country,Extremely important,Once or twice a week,1–2 hours,Other,Studying/working,Relaxed,Never,Has little/no effect,Pop,Rock,5,2,2,1
+18–24,Female,R&B/Soul,Moderately important,Every day,More than 4 hours,Spotify,Exercising,Calm,Often,Makes me happier,Classical,Country,3,5,5,4
+18–24,Male,Hip-hop/Rap,Slightly important,3–4 days a week,3–4 hours,Apple Music,Socialising with friends,Happy,Often,Helps me relax,R&B/Soul,R&B/Soul,2,3,4,4
+18–24,Female,Hip-hop/Rap,Very important,5–6 days a week,3–4 hours,YouTube Music,Before sleeping,Happy,Often,Has little/no effect,R&B/Soul,Rock,4,4,4,4
+35–44,Prefer not to say,R&B/Soul,Extremely important,Every day,2–3 hours,YouTube,"Socialising with friends, Before sleeping",Excited,Often,Helps me focus,Classical,Rock,5,5,3,4
+18–24,Female,Hip-hop/Rap,Slightly important,Every day,3–4 hours,Spotify,Exercising,Energetic,Often,Helps me relax,Classical,Rock,2,5,4,4
+18–24,Male,Rock,Extremely important,5–6 days a week,More than 4 hours,YouTube Music,Exercising,Energetic,Often,Has little/no effect,Classical,Rock,5,4,5,4
+Under 18,Male,R&B/Soul,Extremely important,Once or twice a week,3–4 hours,Spotify,"Socialising with friends, Studying/working",Energetic,Rarely,Helps me relax,R&B/Soul,Hip-hop/Rap,5,2,4,2
+18–24,Female,Hip-hop/Rap,Moderately important,3–4 days a week,3–4 hours,Spotify,"Travelling/commuting, During household activities",Happy,Often,Helps me relax,R&B/Soul,Hip-hop/Rap,3,3,4,4
+25–34,Female,Rock,Very important,5–6 days a week,3–4 hours,YouTube,"During household activities, Relaxing, Travelling/commuting",Motivated,Sometimes,Makes me happier,Classical,Hip-hop/Rap,4,4,4,3
+Under 18,Female,Country,Moderately important,Every day,2–3 hours,Spotify,"Studying/working, Socialising with friends, During household activities, Travelling/commuting",Calm,Often,Makes me happier,Classical,Rock,3,5,3,4
+35–44,Female,R&B/Soul,Slightly important,5–6 days a week,1–2 hours,YouTube,"Studying/working, Exercising",Energetic,Sometimes,Makes me feel emotional,Rock,Hip-hop/Rap,2,4,2,3
+18–24,Male,Country,Moderately important,Every day,2–3 hours,Spotify,"Exercising, Studying/working, Before sleeping, During household activities",Relaxed,Rarely,Makes me happier,Traditional/Folk,Hip-hop/Rap,3,5,3,2
+18–24,Female,Pop,Very important,5–6 days a week,More than 4 hours,Spotify,"During household activities, Studying/working",Energetic,Sometimes,Makes me happier,Electronic/Dance,Hip-hop/Rap,4,4,5,3
+25–34,Male,R&B/Soul,Very important,Every day,2–3 hours,YouTube Music,Exercising,Excited,Often,Helps me relax,Traditional/Folk,Hip-hop/Rap,4,5,3,4
+55 and above,Male,Traditional/Folk,Very important,5–6 days a week,3–4 hours,YouTube,"Relaxing, Socialising with friends",Excited,Sometimes,Makes me happier,Classical,Pop,4,4,4,3
+25–34,Other,Electronic/Dance,Moderately important,5–6 days a week,3–4 hours,YouTube Music,"Socialising with friends, During household activities, Before sleeping",Energetic,Sometimes,Other,R&B/Soul,Hip-hop/Rap,3,4,4,3
+18–24,Female,R&B/Soul,Not important,Rarely,1–2 hours,YouTube,"Other, During household activities",Relaxed,Rarely,Has little/no effect,Classical,Rock,1,1,2,2
+55 and above,Male,R&B/Soul,Very important,Every day,3–4 hours,Other,Before sleeping,Motivated,Often,Makes me happier,Pop,Hip-hop/Rap,4,5,4,4
+35–44,Female,Country,Moderately important,Every day,More than 4 hours,Spotify,"Relaxing, Studying/working",Happy,Always,Helps me relax,Electronic/Dance,Rock,3,5,5,5
+25–34,Female,Classical,Very important,Once or twice a week,1–2 hours,Spotify,Relaxing,Motivated,Often,Helps me relax,Electronic/Dance,Pop,4,2,2,4
+18–24,Male,Traditional/Folk,Very important,Every day,Less than 1 hour,SoundCloud,"During household activities, Exercising",Happy,Often,Gives me energy,Classical,Pop,4,5,1,4
+45–54,Female,Hip-hop/Rap,Very important,3–4 days a week,More than 4 hours,YouTube Music,"Relaxing, Before sleeping, Other, Studying/working",Motivated,Sometimes,Helps me relax,Pop,R&B/Soul,4,3,5,3
+18–24,Female,Hip-hop/Rap,Moderately important,Once or twice a week,1–2 hours,YouTube,Before sleeping,Energetic,Sometimes,Makes me happier,Classical,Hip-hop/Rap,3,2,2,3
+Under 18,Male,Pop,Moderately important,Every day,Less than 1 hour,Spotify,"Other, Studying/working, Exercising",Sad,Often,Makes me happier,Pop,Pop,3,5,1,4
+25–34,Male,Electronic/Dance,Extremely important,Every day,2–3 hours,YouTube,"Travelling/commuting, Exercising",Sad,Often,Makes me happier,Classical,Rock,5,5,3,4
+25–34,Female,Electronic/Dance,Extremely important,Once or twice a week,2–3 hours,YouTube,"Other, Travelling/commuting",Happy,Always,Makes me happier,Rock,Hip-hop/Rap,5,2,3,5
+35–44,Female,Pop,Moderately important,5–6 days a week,1–2 hours,Spotify,"Exercising, Studying/working",Happy,Always,Gives me energy,Pop,Hip-hop/Rap,3,4,2,5
+18–24,Male,Classical,Very important,Every day,3–4 hours,YouTube,"Socialising with friends, Relaxing",Relaxed,Rarely,Has little/no effect,Traditional/Folk,Rock,4,5,4,2
+18–24,Female,Pop,Extremely important,Every day,1–2 hours,Apple Music,Exercising,Excited,Never,Makes me happier,R&B/Soul,Rock,5,5,2,1
+25–34,Female,Hip-hop/Rap,Extremely important,3–4 days a week,1–2 hours,Spotify,Exercising,Relaxed,Often,Makes me happier,Pop,Electronic/Dance,5,3,2,4
+18–24,Female,Electronic/Dance,Moderately important,3–4 days a week,2–3 hours,YouTube,"Exercising, Socialising with friends",Motivated,Always,Has little/no effect,Electronic/Dance,Pop,3,3,3,5
+18–24,Female,Hip-hop/Rap,Very important,Every day,More than 4 hours,YouTube Music,"Socialising with friends, During household activities",Happy,Sometimes,Helps me focus,Rock,Pop,4,5,5,3
+25–34,Female,Country,Very important,3–4 days a week,1–2 hours,YouTube Music,"Before sleeping, Relaxing, Socialising with friends",Energetic,Sometimes,Helps me relax,Classical,Classical,4,3,2,3
+18–24,Female,R&B/Soul,Slightly important,3–4 days a week,1–2 hours,YouTube Music,"Socialising with friends, Relaxing",Motivated,Often,Has little/no effect,R&B/Soul,Rock,2,3,2,4
+18–24,Male,Pop,Very important,3–4 days a week,2–3 hours,YouTube,"Other, Exercising",Relaxed,Never,Gives me energy,Rock,Pop,4,3,3,1
+18–24,Female,Country,Extremely important,Once or twice a week,Less than 1 hour,Spotify,Relaxing,Calm,Sometimes,Helps me focus,Country,Electronic/Dance,5,2,1,3
+25–34,Female,Pop,Moderately important,Every day,3–4 hours,YouTube,"Studying/working, Relaxing",Sad,Always,Has little/no effect,Electronic/Dance,Pop,3,5,4,5
+18–24,Female,Country,Very important,5–6 days a week,3–4 hours,Spotify,During household activities,Happy,Often,Gives me energy,R&B/Soul,Rock,4,4,4,4
+35–44,Female,Hip-hop/Rap,Very important,Every day,1–2 hours,YouTube Music,"Before sleeping, Socialising with friends",Happy,Always,Has little/no effect,Pop,Traditional/Folk,4,5,2,5
+18–24,Male,Hip-hop/Rap,Extremely important,Once or twice a week,1–2 hours,YouTube,"Other, Before sleeping",Motivated,Rarely,Makes me happier,Classical,Pop,5,2,2,2
+18–24,Male,Traditional/Folk,Moderately important,3–4 days a week,2–3 hours,Spotify,Studying/working,Happy,Always,Helps me relax,Pop,Pop,3,3,3,5
+Under 18,Female,Electronic/Dance,Moderately important,3–4 days a week,2–3 hours,Apple Music,"Socialising with friends, Other",Happy,Often,Gives me energy,Hip-hop/Rap,Other,3,3,3,4
+35–44,Female,Traditional/Folk,Extremely important,5–6 days a week,2–3 hours,Apple Music,Other,Relaxed,Always,Makes me feel emotional,R&B/Soul,Electronic/Dance,5,4,3,5
+18–24,Female,Rock,Very important,Every day,2–3 hours,Spotify,"Studying/working, Travelling/commuting",Motivated,Sometimes,Has little/no effect,Classical,R&B/Soul,4,5,3,3
+55 and above,Female,Other,Slightly important,Once or twice a week,3–4 hours,YouTube,"Socialising with friends, Travelling/commuting",Energetic,Often,Makes me happier,Classical,Country,2,2,4,4
+18–24,Male,Pop,Extremely important,3–4 days a week,3–4 hours,YouTube,Relaxing,Calm,Often,Gives me energy,Rock,Pop,5,3,4,4
+18–24,Male,Country,Moderately important,Every day,Less than 1 hour,Spotify,"Exercising, Travelling/commuting",Calm,Always,Gives me energy,R&B/Soul,Pop,3,5,1,5
+25–34,Male,R&B/Soul,Slightly important,5–6 days a week,1–2 hours,Spotify,"Relaxing, Studying/working, During household activities",Energetic,Always,Helps me relax,Hip-hop/Rap,R&B/Soul,2,4,2,5
+18–24,Male,Pop,Moderately important,5–6 days a week,1–2 hours,Spotify,"During household activities, Studying/working",Happy,Rarely,Helps me relax,Pop,R&B/Soul,3,4,2,2
+18–24,Female,Hip-hop/Rap,Very important,Once or twice a week,More than 4 hours,YouTube,"Other, Studying/working, Before sleeping",Energetic,Always,Makes me feel emotional,Pop,Traditional/Folk,4,2,5,5
+45–54,Female,Pop,Moderately important,Every day,2–3 hours,Other,"Travelling/commuting, Exercising",Happy,Always,Gives me energy,Classical,Country,3,5,3,5
+Under 18,Female,Pop,Moderately important,5–6 days a week,1–2 hours,Spotify,Other,Relaxed,Sometimes,Makes me happier,Pop,Electronic/Dance,3,4,2,3
+18–24,Female,Country,Very important,Every day,2–3 hours,Spotify,Before sleeping,Relaxed,Sometimes,Makes me happier,Traditional/Folk,Other,4,5,3,3
+18–24,Male,R&B/Soul,Slightly important,5–6 days a week,More than 4 hours,Spotify,"Relaxing, Travelling/commuting, Studying/working, During household activities",Sad,Always,Has little/no effect,Hip-hop/Rap,Pop,2,4,5,5
+25–34,Male,Pop,Moderately important,3–4 days a week,2–3 hours,YouTube,Other,Happy,Always,Helps me relax,Pop,Hip-hop/Rap,3,3,3,5
+35–44,Female,Pop,Very important,Every day,3–4 hours,SoundCloud,"Exercising, Socialising with friends",Calm,Sometimes,Gives me energy,R&B/Soul,Hip-hop/Rap,4,5,4,3
+18–24,Male,Pop,Moderately important,Rarely,2–3 hours,Apple Music,"During household activities, Relaxing",Motivated,Sometimes,Gives me energy,Classical,Rock,3,1,3,3
+45–54,Male,Country,Extremely important,Every day,3–4 hours,YouTube,"Before sleeping, Other",Happy,Sometimes,Helps me relax,Hip-hop/Rap,Rock,5,5,4,3
+25–34,Male,R&B/Soul,Extremely important,3–4 days a week,1–2 hours,YouTube,"Exercising, Studying/working",Happy,Rarely,Helps me focus,R&B/Soul,R&B/Soul,5,3,2,2
+35–44,Male,Rock,Very important,5–6 days a week,2–3 hours,YouTube Music,"During household activities, Other",Excited,Often,Makes me happier,Classical,Country,4,4,3,4
+18–24,Female,Classical,Not important,3–4 days a week,2–3 hours,Spotify,"During household activities, Socialising with friends, Relaxing",Sad,Often,Makes me happier,R&B/Soul,R&B/Soul,1,3,3,4
+45–54,Male,Electronic/Dance,Moderately important,Once or twice a week,1–2 hours,Apple Music,During household activities,Energetic,Always,Makes me happier,Classical,Pop,3,2,2,5
+Under 18,Male,Pop,Very important,Every day,Less than 1 hour,Spotify,"Studying/working, Other, Travelling/commuting, Socialising with friends",Excited,Sometimes,Gives me energy,Traditional/Folk,Hip-hop/Rap,4,5,1,3
+18–24,Male,Traditional/Folk,Extremely important,Every day,More than 4 hours,Apple Music,"Studying/working, Exercising",Excited,Always,Makes me happier,Electronic/Dance,Hip-hop/Rap,5,5,5,5
+18–24,Female,Traditional/Folk,Extremely important,3–4 days a week,2–3 hours,Apple Music,"During household activities, Before sleeping, Travelling/commuting",Happy,Often,Has little/no effect,Rock,R&B/Soul,5,3,3,4
+18–24,Female,Hip-hop/Rap,Very important,Once or twice a week,2–3 hours,SoundCloud,"Travelling/commuting, Before sleeping, Relaxing",Relaxed,Sometimes,Makes me happier,Classical,Rock,4,2,3,3
+18–24,Male,Electronic/Dance,Extremely important,Every day,2–3 hours,SoundCloud,"Other, Before sleeping, Socialising with friends, Travelling/commuting",Happy,Sometimes,Has little/no effect,Classical,Pop,5,5,3,3
+45–54,Female,Pop,Moderately important,5–6 days a week,More than 4 hours,Spotify,Other,Happy,Often,Has little/no effect,Traditional/Folk,Country,3,4,5,4
+45–54,Female,Classical,Very important,Every day,More than 4 hours,YouTube,Socialising with friends,Happy,Rarely,Makes me happier,Classical,Electronic/Dance,4,5,5,2
+18–24,Male,Hip-hop/Rap,Extremely important,3–4 days a week,2–3 hours,Spotify,"During household activities, Exercising",Calm,Always,Has little/no effect,Pop,R&B/Soul,5,3,3,5
+Under 18,Female,Hip-hop/Rap,Extremely important,3–4 days a week,1–2 hours,Apple Music,Socialising with friends,Happy,Often,Makes me feel emotional,Classical,Rock,5,3,2,4
+55 and above,Female,Rock,Extremely important,5–6 days a week,3–4 hours,YouTube,"Before sleeping, Travelling/commuting, Other, During household activities",Excited,Always,Makes me happier,Classical,Electronic/Dance,5,4,4,5
+18–24,Prefer not to say,R&B/Soul,Extremely important,Every day,2–3 hours,YouTube,"Before sleeping, During household activities",Relaxed,Rarely,Helps me focus,Rock,Electronic/Dance,5,5,3,2
+18–24,Female,R&B/Soul,Extremely important,Every day,3–4 hours,YouTube,Exercising,Energetic,Often,Has little/no effect,Hip-hop/Rap,Electronic/Dance,5,5,4,4
+35–44,Male,Country,Extremely important,5–6 days a week,More than 4 hours,Apple Music,Studying/working,Happy,Always,Makes me happier,Pop,Other,5,4,5,5
+55 and above,Female,Hip-hop/Rap,Slightly important,3–4 days a week,2–3 hours,Apple Music,"During household activities, Other, Before sleeping, Studying/working",Calm,Always,Helps me focus,Rock,R&B/Soul,2,3,3,5
+Under 18,Female,Classical,Very important,Rarely,2–3 hours,YouTube,Travelling/commuting,Excited,Sometimes,Gives me energy,Classical,Hip-hop/Rap,4,1,3,3
+Under 18,Female,Country,Moderately important,Every day,Less than 1 hour,YouTube,"Other, Studying/working",Energetic,Often,Helps me focus,Country,Pop,3,5,1,4
+35–44,Female,Pop,Very important,3–4 days a week,Less than 1 hour,YouTube,"Travelling/commuting, Socialising with friends",Relaxed,Often,Makes me happier,Pop,Hip-hop/Rap,4,3,1,4
+Under 18,Male,Traditional/Folk,Very important,Every day,2–3 hours,YouTube,"Before sleeping, Socialising with friends",Motivated,Always,Gives me energy,Classical,R&B/Soul,4,5,3,5
+18–24,Male,Electronic/Dance,Extremely important,Every day,1–2 hours,YouTube,During household activities,Happy,Sometimes,Helps me relax,Traditional/Folk,Hip-hop/Rap,5,5,2,3
+18–24,Male,R&B/Soul,Moderately important,Every day,2–3 hours,Apple Music,"Exercising, Relaxing",Excited,Sometimes,Makes me feel emotional,R&B/Soul,Traditional/Folk,3,5,3,3
+18–24,Female,Hip-hop/Rap,Moderately important,Once or twice a week,More than 4 hours,YouTube Music,Relaxing,Relaxed,Rarely,Other,Hip-hop/Rap,Traditional/Folk,3,2,5,2
+25–34,Male,Electronic/Dance,Very important,5–6 days a week,3–4 hours,YouTube Music,"Travelling/commuting, Studying/working",Happy,Always,Helps me relax,R&B/Soul,Country,4,4,4,5
+35–44,Male,R&B/Soul,Moderately important,Every day,3–4 hours,YouTube,Socialising with friends,Happy,Often,Other,Classical,Pop,3,5,4,4
+18–24,Male,Rock,Moderately important,Every day,2–3 hours,Apple Music,"Relaxing, Exercising, Before sleeping",Excited,Always,Helps me relax,Rock,Pop,3,5,3,5
+18–24,Male,Country,Very important,5–6 days a week,3–4 hours,Other,"Exercising, Relaxing",Energetic,Often,Helps me focus,Classical,Pop,4,4,4,4
+Under 18,Male,R&B/Soul,Moderately important,Every day,2–3 hours,SoundCloud,"Studying/working, Socialising with friends, Relaxing, Travelling/commuting",Calm,Always,Gives me energy,Hip-hop/Rap,Pop,3,5,3,5
+45–54,Male,Hip-hop/Rap,Very important,Once or twice a week,More than 4 hours,Spotify,"Travelling/commuting, Exercising",Relaxed,Sometimes,Makes me happier,Classical,Rock,4,2,5,3
+45–54,Female,Electronic/Dance,Slightly important,Rarely,2–3 hours,Spotify,Before sleeping,Motivated,Sometimes,Helps me relax,Pop,Rock,2,1,3,3
+18–24,Female,Pop,Extremely important,3–4 days a week,2–3 hours,YouTube,"Exercising, Socialising with friends",Excited,Rarely,Helps me relax,Electronic/Dance,Pop,5,3,3,2
+35–44,Female,Pop,Moderately important,Once or twice a week,2–3 hours,YouTube,Relaxing,Motivated,Always,Other,Pop,Rock,3,2,3,5
+18–24,Female,Electronic/Dance,Very important,Once or twice a week,Less than 1 hour,Spotify,Studying/working,Calm,Sometimes,Helps me focus,R&B/Soul,Traditional/Folk,4,2,1,3
+18–24,Female,Country,Moderately important,3–4 days a week,2–3 hours,Spotify,"Socialising with friends, Before sleeping, Travelling/commuting",Calm,Often,Gives me energy,Country,Pop,3,3,3,4
+55 and above,Female,R&B/Soul,Moderately important,Once or twice a week,Less than 1 hour,Other,"During household activities, Studying/working, Socialising with friends",Happy,Always,Helps me relax,Classical,R&B/Soul,3,2,1,5
+18–24,Female,R&B/Soul,Moderately important,3–4 days a week,1–2 hours,YouTube,"Before sleeping, Studying/working",Happy,Never,Helps me focus,Rock,Hip-hop/Rap,3,3,2,1
+18–24,Female,Hip-hop/Rap,Moderately important,Once or twice a week,Less than 1 hour,YouTube,"Before sleeping, Exercising, Other",Excited,Often,Gives me energy,Classical,Pop,3,2,1,4
+Under 18,Male,R&B/Soul,Very important,Once or twice a week,More than 4 hours,YouTube Music,"Relaxing, Before sleeping, Other",Motivated,Rarely,Gives me energy,R&B/Soul,Classical,4,2,5,2
+18–24,Male,Hip-hop/Rap,Very important,Every day,3–4 hours,YouTube Music,"Before sleeping, Exercising",Energetic,Often,Has little/no effect,Pop,Hip-hop/Rap,4,5,4,4
+18–24,Female,Pop,Slightly important,5–6 days a week,3–4 hours,Apple Music,"During household activities, Relaxing, Before sleeping",Energetic,Often,Makes me happier,R&B/Soul,Rock,2,4,4,4
+18–24,Male,Pop,Moderately important,Every day,3–4 hours,YouTube Music,"Socialising with friends, Exercising",Excited,Sometimes,Helps me relax,Pop,Pop,3,5,4,3
+25–34,Female,Hip-hop/Rap,Moderately important,Every day,Less than 1 hour,Other,"Relaxing, Socialising with friends, Studying/working, Before sleeping",Sad,Often,Other,Rock,Electronic/Dance,3,5,1,4
