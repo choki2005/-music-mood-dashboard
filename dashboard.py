@@ -56,11 +56,13 @@ def load():
 
 data = load()
 
-
-# -------------------- DESIGN --------------------
+# --------------------------------------------------
+# PAGE DESIGN AND CSS
+# --------------------------------------------------
 
 st.markdown("""
 <style>
+
 .stApp {
     background: #F5F3F8;
     color: #292238;
@@ -115,34 +117,56 @@ div[data-testid="stMetric"] {
     box-shadow: 0 2px 10px rgba(38,24,50,.04);
 }
 
-/* AGE AND GENDER SELECTED TEXT FIX */
+/* ================================================
+   AGE AND GENDER SELECTBOX FIX
+   Force selected values to BLACK
+   ================================================ */
 
-[data-testid="stSidebar"] [data-baseweb="select"] > div {
+/* White background for both filter boxes */
+[data-testid="stSidebar"] [data-testid="stSelectbox"]
+[data-baseweb="select"] {
     background-color: #FFFFFF !important;
-    border: 1px solid #D7CADD !important;
+    color: #000000 !important;
 }
 
-/* Make selected age and gender text black */
-
-[data-testid="stSidebar"] [data-baseweb="select"] *,
-[data-testid="stSidebar"] [data-baseweb="select"] span,
-[data-testid="stSidebar"] [data-baseweb="select"] div,
-[data-testid="stSidebar"] [data-baseweb="select"] input {
+/* Selected Age and Gender text */
+[data-testid="stSidebar"] [data-testid="stSelectbox"]
+[data-baseweb="select"] div,
+[data-testid="stSidebar"] [data-testid="stSelectbox"]
+[data-baseweb="select"] span,
+[data-testid="stSidebar"] [data-testid="stSelectbox"]
+[data-baseweb="select"] input,
+[data-testid="stSidebar"] [data-testid="stSelectbox"]
+[data-baseweb="select"] [class*="singleValue"],
+[data-testid="stSidebar"] [data-testid="stSelectbox"]
+[data-baseweb="select"] [class*="valueContainer"] {
     color: #000000 !important;
     -webkit-text-fill-color: #000000 !important;
     opacity: 1 !important;
 }
 
-/* Dropdown background */
+/* Streamlit selected-value text */
+[data-testid="stSidebar"] [data-testid="stSelectbox"]
+[data-baseweb="select"] [class*="ValueContainer"] * {
+    color: #000000 !important;
+    -webkit-text-fill-color: #000000 !important;
+}
 
+/* Dropdown arrow */
+[data-testid="stSidebar"] [data-testid="stSelectbox"]
+[data-baseweb="select"] svg {
+    fill: #7651A8 !important;
+    color: #7651A8 !important;
+}
+
+/* Dropdown menu background */
 [data-baseweb="popover"],
 [data-baseweb="popover"] ul,
 [role="listbox"] {
     background-color: #FFFFFF !important;
 }
 
-/* Dropdown options in black */
-
+/* Dropdown choices in black */
 [data-baseweb="popover"] *,
 [role="listbox"] *,
 [role="option"] {
@@ -150,17 +174,16 @@ div[data-testid="stMetric"] {
     -webkit-text-fill-color: #000000 !important;
 }
 
-/* Highlight selected dropdown option */
-
+/* Selected or hovered dropdown option */
 [role="option"]:hover,
+[role="option"][aria-selected="true"],
 [aria-selected="true"] {
     background-color: #EEE7F4 !important;
     color: #000000 !important;
     -webkit-text-fill-color: #000000 !important;
 }
 
-/* Keep filter labels white */
-
+/* Keep Age group and Gender labels white */
 [data-testid="stSidebar"] [data-testid="stSelectbox"] label {
     color: #FFFFFF !important;
 }
@@ -182,15 +205,18 @@ h2, h3 {
     .hero h1 {
         font-size: 1.5rem;
     }
-}
+
 </style>
 """, unsafe_allow_html=True)
 
 
-# -------------------- SIDEBAR --------------------
+# --------------------------------------------------
+# SIDEBAR NAVIGATION
+# --------------------------------------------------
 
 st.sidebar.markdown("# Music Mood Dashboard")
 st.sidebar.caption("Music preferences · Listening habits · Mood")
+
 st.sidebar.markdown("### Overview")
 
 page = st.sidebar.radio(
@@ -209,6 +235,11 @@ page = st.sidebar.radio(
 st.sidebar.markdown("---")
 st.sidebar.markdown("### Filters")
 
+
+# --------------------------------------------------
+# AGE AND GENDER FILTERS
+# --------------------------------------------------
+
 ages = sorted(data[AGE].dropna().astype(str).unique())
 genders = sorted(data[GENDER].dropna().astype(str).unique())
 
@@ -224,6 +255,11 @@ g = st.sidebar.selectbox(
     key="gender_filter"
 )
 
+
+# --------------------------------------------------
+# APPLY FILTERS
+# --------------------------------------------------
+
 df = data.copy()
 
 if a != "All age groups":
@@ -232,7 +268,9 @@ if a != "All age groups":
 if g != "All genders":
     df = df[df[GENDER].astype(str) == g]
 
-st.sidebar.caption("Filters apply to the survey visualisations.")
+st.sidebar.caption(
+    "Filters apply to the survey visualisations."
+)
 
 if df.empty:
     st.warning(
@@ -242,11 +280,18 @@ if df.empty:
     st.stop()
 
 
-# -------------------- HELPER FUNCTIONS --------------------
+# --------------------------------------------------
+# REUSABLE FUNCTIONS
+# --------------------------------------------------
 
 def hero(title, subtitle=""):
     st.markdown(
-        f'<div class="hero"><h1>{title}</h1><p>{subtitle}</p></div>',
+        f"""
+        <div class="hero">
+            <h1>{title}</h1>
+            <p>{subtitle}</p>
+        </div>
+        """,
         unsafe_allow_html=True
     )
 
@@ -387,7 +432,9 @@ def multi_counts():
     )
 
 
-# -------------------- DASHBOARD PAGE --------------------
+# --------------------------------------------------
+# DASHBOARD PAGE
+# --------------------------------------------------
 
 if page == "Dashboard":
 
@@ -412,7 +459,9 @@ if page == "Dashboard":
         horizontal_bar(AGE, "Respondents by age group")
 
 
-# -------------------- MUSIC PREFERENCES PAGE --------------------
+# --------------------------------------------------
+# MUSIC PREFERENCES PAGE
+# --------------------------------------------------
 
 elif page == "Music Preferences":
 
@@ -441,10 +490,7 @@ elif page == "Music Preferences":
                 value=average,
                 number={
                     "suffix": " / 5",
-                    "font": {
-                        "size": 34,
-                        "color": "#39254D"
-                    }
+                    "font": {"size": 34, "color": "#39254D"}
                 },
                 title={
                     "text": "Average importance of music",
@@ -464,10 +510,7 @@ elif page == "Music Preferences":
                         {"range": [4, 5], "color": "#DCEDE8"}
                     ],
                     "threshold": {
-                        "line": {
-                            "color": "#C05A93",
-                            "width": 4
-                        },
+                        "line": {"color": "#C05A93", "width": 4},
                         "thickness": .8,
                         "value": average
                     }
@@ -488,10 +531,7 @@ elif page == "Music Preferences":
         title="Most-used music platforms"
     )
 
-    tree.update_traces(
-        textinfo="label+value+percent root"
-    )
-
+    tree.update_traces(textinfo="label+value+percent root")
     finish(tree, 420)
 
     left, right = st.columns(2)
@@ -531,7 +571,9 @@ elif page == "Music Preferences":
         finish(fig, max(340, 38 * len(d)))
 
 
-# -------------------- LISTENING HABITS PAGE --------------------
+# --------------------------------------------------
+# LISTENING HABITS PAGE
+# --------------------------------------------------
 
 elif page == "Listening Habits":
 
@@ -543,7 +585,6 @@ elif page == "Listening Habits":
     left, right = st.columns(2)
 
     with left:
-
         column_chart(
             FREQUENCY,
             "Listening frequency",
@@ -618,11 +659,7 @@ elif page == "Listening Habits":
     fig.update_traces(
         textposition="outside",
         cliponaxis=False,
-        hovertemplate=(
-            "%{y}<br>"
-            "%{x} selections"
-            "<extra></extra>"
-        )
+        hovertemplate="%{y}<br>%{x} selections<extra></extra>"
     )
 
     fig.update_layout(
@@ -635,7 +672,9 @@ elif page == "Listening Habits":
     finish(fig, max(360, 42 * len(situations)))
 
 
-# -------------------- MUSIC AND MOOD PAGE --------------------
+# --------------------------------------------------
+# MUSIC AND MOOD PAGE
+# --------------------------------------------------
 
 elif page == "Music & Mood":
 
@@ -663,7 +702,6 @@ elif page == "Music & Mood":
         )
 
         fig.update_traces(opacity=.86)
-
         finish(fig, 420)
 
     d = counts(MOOD_CHANGE)
@@ -677,7 +715,6 @@ elif page == "Music & Mood":
     )
 
     d = d.sort_values("Category")
-
     d["Percentage"] = d["People"] / d["People"].sum() * 100
 
     fig = px.bar(
@@ -701,8 +738,8 @@ elif page == "Music & Mood":
     fig.update_traces(
         textposition="inside",
         hovertemplate=(
-            "%{fullData.name}: "
-            "%{y:.1f}%<extra></extra>"
+            "%{fullData.name}: %{y:.1f}%"
+            "<extra></extra>"
         )
     )
 
@@ -733,8 +770,8 @@ elif page == "Music & Mood":
     comparison = comparison.reset_index()
 
     comparison["Total"] = (
-        comparison["Relaxation"]
-        + comparison["Energy"]
+        comparison["Relaxation"] +
+        comparison["Energy"]
     )
 
     comparison = comparison.sort_values(
@@ -779,7 +816,9 @@ elif page == "Music & Mood":
     finish(fig, max(400, 48 * len(comparison)))
 
 
-# -------------------- K-MEANS CLUSTERING PAGE --------------------
+# --------------------------------------------------
+# K-MEANS CLUSTERING PAGE
+# --------------------------------------------------
 
 elif page == "K-Means Clustering":
 
@@ -797,11 +836,10 @@ elif page == "K-Means Clustering":
 
     cols = [c for c in cols if c in df]
 
-    frame = (
-        df[cols]
-        .apply(pd.to_numeric, errors="coerce")
-        .dropna()
-    )
+    frame = df[cols].apply(
+        pd.to_numeric,
+        errors="coerce"
+    ).dropna()
 
     if len(frame) < 5:
 
@@ -837,8 +875,7 @@ elif page == "K-Means Clustering":
             "Component 1": xy[:, 0],
             "Component 2": xy[:, 1],
             "Cluster": [
-                f"Cluster {i + 1}"
-                for i in labels
+                f"Cluster {i+1}" for i in labels
             ]
         })
 
@@ -852,10 +889,7 @@ elif page == "K-Means Clustering":
             opacity=.82
         )
 
-        fig.update_traces(
-            marker=dict(size=9)
-        )
-
+        fig.update_traces(marker=dict(size=9))
         finish(fig, 490)
 
         sizes = (
@@ -867,7 +901,7 @@ elif page == "K-Means Clustering":
         )
 
         sizes["Cluster"] = sizes["Cluster"].map(
-            lambda n: f"Cluster {n + 1}"
+            lambda n: f"Cluster {n+1}"
         )
 
         fig = px.bar(
@@ -880,17 +914,13 @@ elif page == "K-Means Clustering":
             title="Number of respondents in each cluster"
         )
 
-        fig.update_traces(
-            textposition="outside"
-        )
-
+        fig.update_traces(textposition="outside")
         finish(fig, 350)
 
         profile = (
             frame.assign(
                 Cluster=[
-                    f"Cluster {i + 1}"
-                    for i in labels
+                    f"Cluster {i+1}" for i in labels
                 ]
             )
             .groupby("Cluster")[cols]
@@ -915,14 +945,13 @@ elif page == "K-Means Clustering":
             title="Average score profile by cluster"
         )
 
-        fig.update_layout(
-            xaxis_tickangle=-15
-        )
-
+        fig.update_layout(xaxis_tickangle=-15)
         finish(fig, 420)
 
 
-# -------------------- ABOUT PAGE --------------------
+# --------------------------------------------------
+# ABOUT PAGE
+# --------------------------------------------------
 
 elif page == "About Page":
 
@@ -957,7 +986,6 @@ elif page == "About Page":
         )
 
         st.markdown("**Dataset**")
-
         st.write("500 survey responses · 13 survey questions")
 
         st.markdown("**Main areas**")
@@ -979,9 +1007,9 @@ elif page == "About Page":
 
         st.write(
             "Descriptive frequency counts and percentages, "
-            "score-based summaries, multi-response counting "
-            "for listening situations, and K-Means clustering "
-            "using the existing numerical score features."
+            "score-based summaries, multi-response counting for "
+            "listening situations, and K-Means clustering using "
+            "the existing numerical score features."
         )
 
     st.markdown("### Dashboard Features")
@@ -1037,7 +1065,9 @@ elif page == "About Page":
         st.markdown(f"- {reference}")
 
 
-# -------------------- FOOTER --------------------
+# --------------------------------------------------
+# FOOTER
+# --------------------------------------------------
 
 st.markdown("---")
 
