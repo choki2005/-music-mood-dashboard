@@ -47,12 +47,17 @@ def load():
         raise FileNotFoundError(
             "Keep music_mood_transformed.csv beside dashboard.py."
         )
+
     return pd.read_csv(DATA).drop(
-        columns=["Email Address"], errors="ignore"
+        columns=["Email Address"],
+        errors="ignore"
     )
 
 
 data = load()
+
+
+# -------------------- DESIGN --------------------
 
 st.markdown("""
 <style>
@@ -63,7 +68,9 @@ st.markdown("""
 
 [data-testid="stSidebar"] {
     background: linear-gradient(
-        180deg, #241832 0%, #38234B 100%
+        180deg,
+        #241832 0%,
+        #38234B 100%
     );
 }
 
@@ -80,7 +87,10 @@ st.markdown("""
     padding: 1.45rem 1.65rem;
     border-radius: 18px;
     background: linear-gradient(
-        112deg, #241832, #5B347A 58%, #A3447E
+        112deg,
+        #241832,
+        #5B347A 58%,
+        #A3447E
     );
     color: white;
     margin: 0 0 1.15rem;
@@ -105,53 +115,48 @@ div[data-testid="stMetric"] {
     box-shadow: 0 2px 10px rgba(38,24,50,.04);
 }
 
-div[data-baseweb="select"] > div {
-    background: #FFFFFF !important;
+/* AGE AND GENDER FILTER TEXT VISIBILITY */
+
+[data-testid="stSidebar"] div[data-baseweb="select"] > div {
+    background-color: #FFFFFF !important;
     border: 1px solid #D7CADD !important;
-    color: #282033 !important;
 }
 
-div[data-baseweb="select"] input {
-    color: #282033 !important;
-}
-
-div[data-baseweb="select"] span {
-    color: #282033 !important;
-}
-
-div[role="listbox"] {
-    background: #FFFFFF !important;
-}
-
-div[role="option"] {
-    background: #FFFFFF !important;
-    color: #282033 !important;
-}
-
-div[role="option"]:hover {
-    background: #EEE7F4 !important;
+[data-testid="stSidebar"] div[data-baseweb="select"] *,
+[data-testid="stSidebar"] div[data-baseweb="select"] input {
     color: #241832 !important;
+    -webkit-text-fill-color: #241832 !important;
+    opacity: 1 !important;
 }
 
-/* Keep selected Age/Gender values readable */
-[data-testid="stSidebar"] [data-testid="stSelectbox"]
-[data-baseweb="select"],
-[data-testid="stSidebar"] [data-testid="stSelectbox"]
-[data-baseweb="select"] *,
-[data-testid="stSidebar"] [data-testid="stSelectbox"] input,
-[data-testid="stSidebar"] [data-testid="stSelectbox"] span {
-    color: #000000 !important;
-    -webkit-text-fill-color: #000000 !important;
+[data-testid="stSidebar"] div[data-baseweb="select"] input::placeholder {
+    color: #655873 !important;
+    -webkit-text-fill-color: #655873 !important;
+    opacity: 1 !important;
 }
 
-[data-testid="stSidebar"] [data-testid="stSelectbox"] svg {
-    fill: #000000 !important;
+[data-baseweb="popover"],
+[data-baseweb="popover"] ul,
+[role="listbox"] {
+    background-color: #FFFFFF !important;
 }
 
-[data-testid="stSidebar"] [data-testid="stSelectbox"]
+[data-baseweb="popover"] *,
+[role="listbox"] *,
 [role="option"] {
-    color: #000000 !important;
-    -webkit-text-fill-color: #000000 !important;
+    color: #241832 !important;
+    -webkit-text-fill-color: #241832 !important;
+}
+
+[role="option"]:hover,
+[aria-selected="true"] {
+    background-color: #EEE7F4 !important;
+    color: #241832 !important;
+    -webkit-text-fill-color: #241832 !important;
+}
+
+div[data-testid="stSelectbox"] [data-testid="stMarkdownContainer"] p {
+    color: #FFFFFF !important;
 }
 
 h2, h3 {
@@ -176,7 +181,7 @@ h2, h3 {
 """, unsafe_allow_html=True)
 
 
-# SIDEBAR AND NAVIGATION
+# -------------------- SIDEBAR --------------------
 
 st.sidebar.markdown("# Music Mood Dashboard")
 st.sidebar.caption("Music preferences · Listening habits · Mood")
@@ -221,9 +226,7 @@ if a != "All age groups":
 if g != "All genders":
     df = df[df[GENDER].astype(str) == g]
 
-st.sidebar.caption(
-    "Filters apply to the survey visualisations."
-)
+st.sidebar.caption("Filters apply to the survey visualisations.")
 
 if df.empty:
     st.warning(
@@ -233,12 +236,11 @@ if df.empty:
     st.stop()
 
 
-# REUSABLE FUNCTIONS
+# -------------------- HELPER FUNCTIONS --------------------
 
 def hero(title, subtitle=""):
     st.markdown(
-        f'<div class="hero"><h1>{title}</h1>'
-        f'<p>{subtitle}</p></div>',
+        f'<div class="hero"><h1>{title}</h1><p>{subtitle}</p></div>',
         unsafe_allow_html=True
     )
 
@@ -272,9 +274,7 @@ def counts(col):
 
 
 def horizontal_bar(col, title, height=None):
-    d = counts(col).sort_values(
-        "People", ascending=True
-    )
+    d = counts(col).sort_values("People", ascending=True)
 
     fig = px.bar(
         d,
@@ -299,10 +299,7 @@ def horizontal_bar(col, title, height=None):
         showlegend=False
     )
 
-    finish(
-        fig,
-        height or max(340, 38 * len(d))
-    )
+    finish(fig, height or max(340, 38 * len(d)))
 
 
 def column_chart(col, title, order=None, height=390):
@@ -384,7 +381,7 @@ def multi_counts():
     )
 
 
-# PAGE 1: DASHBOARD
+# -------------------- DASHBOARD PAGE --------------------
 
 if page == "Dashboard":
 
@@ -409,7 +406,7 @@ if page == "Dashboard":
         horizontal_bar(AGE, "Respondents by age group")
 
 
-# PAGE 2: MUSIC PREFERENCES
+# -------------------- MUSIC PREFERENCES PAGE --------------------
 
 elif page == "Music Preferences":
 
@@ -421,21 +418,16 @@ elif page == "Music Preferences":
     left, right = st.columns([1.2, 1])
 
     with left:
-        horizontal_bar(
-            GENRE,
-            "Favourite music genres"
-        )
+        horizontal_bar(GENRE, "Favourite music genres")
 
     with right:
+
         score = pd.to_numeric(
             df["Music_Importance_Score"],
             errors="coerce"
         ).dropna()
 
-        average = (
-            float(score.mean())
-            if not score.empty else 0
-        )
+        average = float(score.mean()) if not score.empty else 0
 
         gauge = go.Figure(
             go.Indicator(
@@ -496,7 +488,8 @@ elif page == "Music Preferences":
         values="People",
         color="People",
         color_continuous_scale=[
-            "#E9DDF2", "#7651A8"
+            "#E9DDF2",
+            "#7651A8"
         ],
         title="Most-used music platforms"
     )
@@ -516,6 +509,7 @@ elif page == "Music Preferences":
         )
 
     with right:
+
         d = counts(ENERGY).sort_values(
             "People",
             ascending=True
@@ -529,7 +523,8 @@ elif page == "Music Preferences":
             text="People",
             color="People",
             color_continuous_scale=[
-                "#F2D9A6", "#C05A4A"
+                "#F2D9A6",
+                "#C05A4A"
             ],
             title="Music genres for energy"
         )
@@ -545,13 +540,10 @@ elif page == "Music Preferences":
             coloraxis_showscale=False
         )
 
-        finish(
-            fig,
-            max(340, 38 * len(d))
-        )
+        finish(fig, max(340, 38 * len(d)))
 
 
-# PAGE 3: LISTENING HABITS
+# -------------------- LISTENING HABITS PAGE --------------------
 
 elif page == "Listening Habits":
 
@@ -563,6 +555,7 @@ elif page == "Listening Habits":
     left, right = st.columns(2)
 
     with left:
+
         column_chart(
             FREQUENCY,
             "Listening frequency",
@@ -576,6 +569,7 @@ elif page == "Listening Habits":
         )
 
     with right:
+
         d = counts(HOURS)
 
         hour_order = [
@@ -617,117 +611,43 @@ elif page == "Listening Habits":
 
         finish(fig, 400)
 
-    bubble = multi_counts().sort_values(
+    situations = multi_counts().sort_values(
         "Selections",
-        ascending=False
-    ).reset_index(drop=True)
+        ascending=True
+    )
 
-    # Greedy circle packing
-    import math
-
-    radii = (
-        bubble["Selections"] /
-        bubble["Selections"].max()
-    ).pow(0.5) * 1.05
-
-    positions = []
-
-    for radius in radii:
-
-        if not positions:
-            positions.append((0.0, 0.0))
-            continue
-
-        placed = False
-
-        for ring in range(1, 180):
-
-            distance = ring * 0.075
-            steps = max(
-                24,
-                int(2 * math.pi * ring * 5)
-            )
-
-            for step in range(steps):
-
-                angle = 2 * math.pi * step / steps
-
-                candidate = (
-                    distance * math.cos(angle),
-                    distance * math.sin(angle)
-                )
-
-                if all(
-                    math.dist(candidate, point)
-                    >= radius + other_radius + 0.06
-                    for point, other_radius in zip(
-                        positions,
-                        radii[:len(positions)]
-                    )
-                ):
-                    positions.append(candidate)
-                    placed = True
-                    break
-
-            if placed:
-                break
-
-        if not placed:
-            positions.append(
-                (len(positions) * 2.5, 0.0)
-            )
-
-    bubble["x"] = [
-        point[0] for point in positions
-    ]
-
-    bubble["y"] = [
-        point[1] for point in positions
-    ]
-
-    bubble["Bubble size"] = bubble["Selections"]
-
-    fig = px.scatter(
-        bubble,
-        x="x",
-        y="y",
-        size="Bubble size",
-        text="Situation",
+    fig = px.bar(
+        situations,
+        x="Selections",
+        y="Situation",
+        orientation="h",
+        text="Selections",
         color="Situation",
-        size_max=105,
         color_discrete_sequence=COLORS,
-        title="Listening situations"
+        title="Listening Situations"
     )
 
     fig.update_traces(
-        textposition="middle center",
-        marker=dict(
-            opacity=.86,
-            line=dict(width=1.5, color="white")
-        ),
+        textposition="outside",
+        cliponaxis=False,
         hovertemplate=(
-            "%{text}<br>"
-            "%{customdata[0]} selections"
+            "%{y}<br>"
+            "%{x} selections"
             "<extra></extra>"
-        ),
-        customdata=bubble[["Selections"]].to_numpy()
+        )
     )
 
     fig.update_layout(
-        xaxis=dict(
-            visible=False,
-            scaleanchor="y",
-            scaleratio=1
-        ),
-        yaxis=dict(visible=False),
+        xaxis_title="Number of Selections",
+        yaxis_title="",
         showlegend=False,
-        margin=dict(l=15, r=15, t=58, b=25)
+        margin=dict(l=15, r=35, t=58, b=25)
     )
 
-    finish(fig, 460)
+    finish(fig, max(360, 42 * len(situations)))
 
 
-# PAGE 4: MUSIC AND MOOD
+# -------------------- MUSIC AND MOOD PAGE --------------------
 
 elif page == "Music & Mood":
 
@@ -745,6 +665,7 @@ elif page == "Music & Mood":
         )
 
     with right:
+
         d = counts(MOOD_EFFECT)
 
         fig = px.bar_polar(
@@ -837,92 +758,68 @@ elif page == "Music & Mood":
     ).fillna(0).astype(int)
 
     comparison.index.name = "Genre"
+    comparison = comparison.reset_index()
 
-    comparison = (
-        comparison
-        .reset_index()
-        .sort_values(
-            ["Relaxation", "Energy"],
-            ascending=True
-        )
+    comparison["Total"] = (
+        comparison["Relaxation"]
+        + comparison["Energy"]
     )
 
-    fig = go.Figure()
-
-    for _, row in comparison.iterrows():
-
-        fig.add_trace(
-            go.Scatter(
-                x=[
-                    row["Relaxation"],
-                    row["Energy"]
-                ],
-                y=[
-                    row["Genre"],
-                    row["Genre"]
-                ],
-                mode="lines",
-                line=dict(
-                    color="#D8CDE2",
-                    width=3
-                ),
-                showlegend=False,
-                hoverinfo="skip"
-            )
-        )
-
-    fig.add_trace(
-        go.Scatter(
-            x=comparison["Relaxation"],
-            y=comparison["Genre"],
-            mode="markers",
-            name="Relaxation",
-            marker=dict(
-                color="#7651A8",
-                size=12
-            ),
-            hovertemplate=(
-                "%{y}<br>"
-                "Relaxation: %{x}<extra></extra>"
-            )
-        )
+    comparison = comparison.sort_values(
+        "Total",
+        ascending=True
     )
 
-    fig.add_trace(
-        go.Scatter(
-            x=comparison["Energy"],
-            y=comparison["Genre"],
-            mode="markers",
-            name="Energy",
-            marker=dict(
-                color="#D6A64B",
-                size=12
-            ),
-            hovertemplate=(
-                "%{y}<br>"
-                "Energy: %{x}<extra></extra>"
-            )
-        )
+    comparison_long = comparison.melt(
+        id_vars="Genre",
+        value_vars=["Relaxation", "Energy"],
+        var_name="Listening Purpose",
+        value_name="Number of Respondents"
+    )
+
+    fig = px.bar(
+        comparison_long,
+        x="Number of Respondents",
+        y="Genre",
+        color="Listening Purpose",
+        barmode="group",
+        orientation="h",
+        text="Number of Respondents",
+        color_discrete_map={
+            "Relaxation": "#7651A8",
+            "Energy": "#D6A64B"
+        },
+        title="Relaxation Genres vs Energy Genres"
+    )
+
+    fig.update_traces(
+        textposition="outside",
+        cliponaxis=False
     )
 
     fig.update_layout(
-        title="Relaxation genres vs energy genres",
-        xaxis_title="Number of respondents",
-        yaxis_title="Genre",
+        xaxis_title="Number of Respondents",
+        yaxis_title="",
         legend=dict(
             orientation="h",
             y=1.08,
             x=0
+        ),
+        margin=dict(
+            l=15,
+            r=40,
+            t=75,
+            b=25
         )
     )
 
     finish(
         fig,
-        max(390, 36 * len(comparison))
+        max(400, 48 * len(comparison))
     )
 
 
-# PAGE 5: K-MEANS CLUSTERING
+# -------------------- K-MEANS CLUSTERING PAGE --------------------
 
 elif page == "K-Means Clustering":
 
@@ -938,10 +835,7 @@ elif page == "K-Means Clustering":
         "Mood_Change_Score"
     ]
 
-    cols = [
-        c for c in cols
-        if c in df
-    ]
+    cols = [c for c in cols if c in df]
 
     frame = (
         df[cols]
@@ -1012,7 +906,7 @@ elif page == "K-Means Clustering":
             .reset_index(name="Respondents")
         )
 
-        sizes["Cluster"] = sizes.Cluster.map(
+        sizes["Cluster"] = sizes["Cluster"].map(
             lambda n: f"Cluster {n + 1}"
         )
 
@@ -1068,7 +962,7 @@ elif page == "K-Means Clustering":
         finish(fig, 420)
 
 
-# PAGE 6: ABOUT PAGE
+# -------------------- ABOUT PAGE --------------------
 
 elif page == "About Page":
 
@@ -1080,12 +974,13 @@ elif page == "About Page":
     st.markdown("### About the Project")
 
     st.write(
-        "The Music Mood Dashboard explores how people choose and use music "
-        "in everyday life. Using survey responses, it presents patterns in "
-        "favourite genres, music platforms, listening frequency and duration, "
-        "listening situations, and self-reported mood. The dashboard also "
-        "includes a K-Means clustering view to explore groups of respondents "
-        "with similar listening-score patterns."
+        "The Music Mood Dashboard explores how people choose and use "
+        "music in everyday life. Using survey responses, it presents "
+        "patterns in favourite genres, music platforms, listening "
+        "frequency and duration, listening situations, and self-reported "
+        "mood. The dashboard also includes a K-Means clustering view "
+        "to explore groups of respondents with similar listening-score "
+        "patterns."
     )
 
     st.markdown("### Project Information")
@@ -1102,7 +997,10 @@ elif page == "About Page":
         )
 
         st.markdown("**Dataset**")
-        st.write("500 survey responses · 13 survey questions")
+
+        st.write(
+            "500 survey responses · 13 survey questions"
+        )
 
         st.markdown("**Main areas**")
 
@@ -1122,9 +1020,10 @@ elif page == "About Page":
         st.markdown("**Analytical approach**")
 
         st.write(
-            "Descriptive frequency counts and percentages, score-based "
-            "summaries, multi-response counting for listening situations, "
-            "and K-Means clustering using the existing numerical score features."
+            "Descriptive frequency counts and percentages, "
+            "score-based summaries, multi-response counting "
+            "for listening situations, and K-Means clustering "
+            "using the existing numerical score features."
         )
 
     st.markdown("### Dashboard Features")
@@ -1180,72 +1079,11 @@ elif page == "About Page":
         st.markdown(f"- {reference}")
 
 
-# FOOTER
+# -------------------- CLEAN FOOTER --------------------
 
 st.markdown("---")
 
 st.caption(
     "Music Mood Dashboard · The supplied survey source file "
     "identifies the responses as synthetic."
-)
-
-# CSS-based Streamlit-style logo
-# This avoids displaying raw SVG path code.
-
-st.markdown(
-    """
-    <div style="
-        display:flex;
-        justify-content:center;
-        align-items:center;
-        gap:10px;
-        padding:15px 0 10px 0;
-    ">
-
-        <div style="
-            display:flex;
-            flex-direction:column;
-            align-items:center;
-            gap:2px;
-        ">
-
-            <div style="
-                width:27px;
-                height:7px;
-                background:#FF4B4B;
-                clip-path:polygon(
-                    0 0, 100% 0, 80% 100%, 20% 100%
-                );
-            "></div>
-
-            <div style="
-                width:21px;
-                height:7px;
-                background:#FF4B4B;
-                clip-path:polygon(
-                    0 0, 100% 0, 80% 100%, 20% 100%
-                );
-            "></div>
-
-            <div style="
-                width:15px;
-                height:7px;
-                background:#FF4B4B;
-                clip-path:polygon(
-                    0 0, 100% 0, 80% 100%, 20% 100%
-                );
-            "></div>
-
-        </div>
-
-        <span style="
-            color:#888;
-            font-size:14px;
-        ">
-            Made with <strong>Streamlit</strong>
-        </span>
-
-    </div>
-    """,
-    unsafe_allow_html=True
 )
