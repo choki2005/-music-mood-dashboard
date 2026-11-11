@@ -1,6 +1,7 @@
 
 from pathlib import Path
 import warnings
+import math
 import pandas as pd
 import streamlit as st
 import plotly.express as px
@@ -47,7 +48,6 @@ def load():
         raise FileNotFoundError(
             "Keep music_mood_transformed.csv beside dashboard.py."
         )
-
     return pd.read_csv(DATA).drop(
         columns=["Email Address"],
         errors="ignore"
@@ -55,6 +55,7 @@ def load():
 
 
 data = load()
+
 
 # --------------------------------------------------
 # PAGE DESIGN AND CSS
@@ -117,75 +118,79 @@ div[data-testid="stMetric"] {
     box-shadow: 0 2px 10px rgba(38,24,50,.04);
 }
 
-/* ================================================
-   AGE AND GENDER SELECTBOX FIX
-   Force selected values to BLACK
-   ================================================ */
 
-/* White background for both filter boxes */
+/* ==========================================
+   AGE AND GENDER DROPDOWN TEXT FIX
+   ========================================== */
+
+/* White dropdown background */
 [data-testid="stSidebar"] [data-testid="stSelectbox"]
-[data-baseweb="select"] {
+div[data-baseweb="select"] > div {
     background-color: #FFFFFF !important;
-    color: #000000 !important;
+    border: 1px solid #D7CADD !important;
 }
 
-/* Selected Age and Gender text */
+/* Force ALL selected dropdown text to BLACK */
 [data-testid="stSidebar"] [data-testid="stSelectbox"]
-[data-baseweb="select"] div,
+div[data-baseweb="select"],
 [data-testid="stSidebar"] [data-testid="stSelectbox"]
-[data-baseweb="select"] span,
+div[data-baseweb="select"] *,
 [data-testid="stSidebar"] [data-testid="stSelectbox"]
-[data-baseweb="select"] input,
+div[data-baseweb="select"] div,
 [data-testid="stSidebar"] [data-testid="stSelectbox"]
-[data-baseweb="select"] [class*="singleValue"],
+div[data-baseweb="select"] span,
 [data-testid="stSidebar"] [data-testid="stSelectbox"]
-[data-baseweb="select"] [class*="valueContainer"] {
+div[data-baseweb="select"] input,
+[data-testid="stSidebar"] [data-testid="stSelectbox"]
+div[data-baseweb="select"] p {
     color: #000000 !important;
     -webkit-text-fill-color: #000000 !important;
     opacity: 1 !important;
 }
 
-/* Streamlit selected-value text */
+/* Selected value text */
 [data-testid="stSidebar"] [data-testid="stSelectbox"]
-[data-baseweb="select"] [class*="ValueContainer"] * {
+div[data-baseweb="select"] [class*="singleValue"],
+[data-testid="stSidebar"] [data-testid="stSelectbox"]
+div[data-baseweb="select"] [class*="SingleValue"] {
     color: #000000 !important;
     -webkit-text-fill-color: #000000 !important;
 }
 
 /* Dropdown arrow */
 [data-testid="stSidebar"] [data-testid="stSelectbox"]
-[data-baseweb="select"] svg {
-    fill: #7651A8 !important;
-    color: #7651A8 !important;
+div[data-baseweb="select"] svg {
+    fill: #E9DDF2 !important;
+    color: #E9DDF2 !important;
 }
 
 /* Dropdown menu background */
-[data-baseweb="popover"],
-[data-baseweb="popover"] ul,
-[role="listbox"] {
+div[data-baseweb="popover"],
+div[data-baseweb="popover"] ul,
+div[role="listbox"] {
     background-color: #FFFFFF !important;
 }
 
-/* Dropdown choices in black */
-[data-baseweb="popover"] *,
-[role="listbox"] *,
-[role="option"] {
+/* Dropdown options in black */
+div[data-baseweb="popover"] *,
+div[role="listbox"] *,
+div[role="option"] {
     color: #000000 !important;
     -webkit-text-fill-color: #000000 !important;
 }
 
-/* Selected or hovered dropdown option */
-[role="option"]:hover,
-[role="option"][aria-selected="true"],
-[aria-selected="true"] {
+/* Hover and selected dropdown options */
+div[role="option"]:hover,
+div[role="option"][aria-selected="true"] {
     background-color: #EEE7F4 !important;
     color: #000000 !important;
     -webkit-text-fill-color: #000000 !important;
 }
 
-/* Keep Age group and Gender labels white */
+/* Keep Age group and Gender labels WHITE */
 [data-testid="stSidebar"] [data-testid="stSelectbox"] label {
     color: #FFFFFF !important;
+    -webkit-text-fill-color: #FFFFFF !important;
 }
 
 h2, h3 {
@@ -205,6 +210,7 @@ h2, h3 {
     .hero h1 {
         font-size: 1.5rem;
     }
+}
 
 </style>
 """, unsafe_allow_html=True)
@@ -268,9 +274,7 @@ if a != "All age groups":
 if g != "All genders":
     df = df[df[GENDER].astype(str) == g]
 
-st.sidebar.caption(
-    "Filters apply to the survey visualisations."
-)
+st.sidebar.caption("Filters apply to the survey visualisations.")
 
 if df.empty:
     st.warning(
@@ -286,12 +290,7 @@ if df.empty:
 
 def hero(title, subtitle=""):
     st.markdown(
-        f"""
-        <div class="hero">
-            <h1>{title}</h1>
-            <p>{subtitle}</p>
-        </div>
-        """,
+        f'<div class="hero"><h1>{title}</h1><p>{subtitle}</p></div>',
         unsafe_allow_html=True
     )
 
@@ -484,39 +483,37 @@ elif page == "Music Preferences":
 
         average = float(score.mean()) if not score.empty else 0
 
-        gauge = go.Figure(
-            go.Indicator(
-                mode="gauge+number",
-                value=average,
-                number={
-                    "suffix": " / 5",
-                    "font": {"size": 34, "color": "#39254D"}
+        gauge = go.Figure(go.Indicator(
+            mode="gauge+number",
+            value=average,
+            number={
+                "suffix": " / 5",
+                "font": {"size": 34, "color": "#39254D"}
+            },
+            title={
+                "text": "Average importance of music",
+                "font": {"size": 17}
+            },
+            gauge={
+                "axis": {
+                    "range": [0, 5],
+                    "tickwidth": 1,
+                    "tickcolor": "#8A7A99"
                 },
-                title={
-                    "text": "Average importance of music",
-                    "font": {"size": 17}
-                },
-                gauge={
-                    "axis": {
-                        "range": [0, 5],
-                        "tickwidth": 1,
-                        "tickcolor": "#8A7A99"
-                    },
-                    "bar": {"color": "#7651A8"},
-                    "bgcolor": "#F1ECF5",
-                    "steps": [
-                        {"range": [0, 2], "color": "#F3E4EC"},
-                        {"range": [2, 4], "color": "#E9E1F1"},
-                        {"range": [4, 5], "color": "#DCEDE8"}
-                    ],
-                    "threshold": {
-                        "line": {"color": "#C05A93", "width": 4},
-                        "thickness": .8,
-                        "value": average
-                    }
+                "bar": {"color": "#7651A8"},
+                "bgcolor": "#F1ECF5",
+                "steps": [
+                    {"range": [0, 2], "color": "#F3E4EC"},
+                    {"range": [2, 4], "color": "#E9E1F1"},
+                    {"range": [4, 5], "color": "#DCEDE8"}
+                ],
+                "threshold": {
+                    "line": {"color": "#C05A93", "width": 4},
+                    "thickness": .8,
+                    "value": average
                 }
-            )
-        )
+            }
+        ))
 
         finish(gauge, 400)
 
@@ -540,11 +537,7 @@ elif page == "Music Preferences":
         horizontal_bar(RELAX, "Music genres for relaxation")
 
     with right:
-
-        d = counts(ENERGY).sort_values(
-            "People",
-            ascending=True
-        )
+        d = counts(ENERGY).sort_values("People", ascending=True)
 
         fig = px.bar(
             d,
@@ -640,36 +633,95 @@ elif page == "Listening Habits":
 
         finish(fig, 400)
 
-    situations = multi_counts().sort_values(
+    bubble = multi_counts().sort_values(
         "Selections",
-        ascending=True
-    )
+        ascending=False
+    ).reset_index(drop=True)
 
-    fig = px.bar(
-        situations,
-        x="Selections",
-        y="Situation",
-        orientation="h",
-        text="Selections",
+    radii = (
+        bubble["Selections"] / bubble["Selections"].max()
+    ).pow(0.5) * 1.05
+
+    positions = []
+
+    for radius in radii:
+
+        if not positions:
+            positions.append((0.0, 0.0))
+            continue
+
+        placed = False
+
+        for ring in range(1, 180):
+
+            distance = ring * 0.075
+            steps = max(24, int(2 * math.pi * ring * 5))
+
+            for step in range(steps):
+
+                angle = 2 * math.pi * step / steps
+
+                candidate = (
+                    distance * math.cos(angle),
+                    distance * math.sin(angle)
+                )
+
+                if all(
+                    math.dist(candidate, point)
+                    >= radius + other_radius + 0.06
+                    for point, other_radius in zip(
+                        positions,
+                        radii[:len(positions)]
+                    )
+                ):
+                    positions.append(candidate)
+                    placed = True
+                    break
+
+            if placed:
+                break
+
+        if not placed:
+            positions.append((len(positions) * 2.5, 0.0))
+
+    bubble["x"] = [point[0] for point in positions]
+    bubble["y"] = [point[1] for point in positions]
+    bubble["Bubble size"] = bubble["Selections"]
+
+    fig = px.scatter(
+        bubble,
+        x="x",
+        y="y",
+        size="Bubble size",
+        text="Situation",
         color="Situation",
+        size_max=105,
         color_discrete_sequence=COLORS,
-        title="Listening Situations"
+        title="Listening situations"
     )
 
     fig.update_traces(
-        textposition="outside",
-        cliponaxis=False,
-        hovertemplate="%{y}<br>%{x} selections<extra></extra>"
+        textposition="middle center",
+        marker=dict(
+            opacity=.86,
+            line=dict(width=1.5, color="white")
+        ),
+        hovertemplate=(
+            "%{text}<br>"
+            "%{customdata[0]} selections"
+            "<extra></extra>"
+        ),
+        customdata=bubble[["Selections"]].to_numpy()
     )
 
     fig.update_layout(
-        xaxis_title="Number of Selections",
-        yaxis_title="",
+        xaxis=dict(visible=False, scaleanchor="y", scaleratio=1),
+        yaxis=dict(visible=False),
         showlegend=False,
-        margin=dict(l=15, r=35, t=58, b=25)
+        margin=dict(l=15, r=15, t=58, b=25)
     )
 
-    finish(fig, max(360, 42 * len(situations)))
+    finish(fig, 460)
 
 
 # --------------------------------------------------
@@ -737,10 +789,7 @@ elif page == "Music & Mood":
 
     fig.update_traces(
         textposition="inside",
-        hovertemplate=(
-            "%{fullData.name}: %{y:.1f}%"
-            "<extra></extra>"
-        )
+        hovertemplate="%{fullData.name}: %{y:.1f}%<extra></extra>"
     )
 
     finish(fig, 390)
@@ -767,53 +816,51 @@ elif page == "Music & Mood":
     ).fillna(0).astype(int)
 
     comparison.index.name = "Genre"
-    comparison = comparison.reset_index()
 
-    comparison["Total"] = (
-        comparison["Relaxation"] +
-        comparison["Energy"]
+    comparison = (
+        comparison.reset_index()
+        .sort_values(["Relaxation", "Energy"], ascending=True)
     )
 
-    comparison = comparison.sort_values(
-        "Total",
-        ascending=True
-    )
+    fig = go.Figure()
 
-    comparison_long = comparison.melt(
-        id_vars="Genre",
-        value_vars=["Relaxation", "Energy"],
-        var_name="Listening Purpose",
-        value_name="Number of Respondents"
-    )
+    for _, row in comparison.iterrows():
 
-    fig = px.bar(
-        comparison_long,
-        x="Number of Respondents",
-        y="Genre",
-        color="Listening Purpose",
-        barmode="group",
-        orientation="h",
-        text="Number of Respondents",
-        color_discrete_map={
-            "Relaxation": "#7651A8",
-            "Energy": "#D6A64B"
-        },
-        title="Relaxation Genres vs Energy Genres"
-    )
+        fig.add_trace(go.Scatter(
+            x=[row["Relaxation"], row["Energy"]],
+            y=[row["Genre"], row["Genre"]],
+            mode="lines",
+            line=dict(color="#D8CDE2", width=3),
+            showlegend=False,
+            hoverinfo="skip"
+        ))
 
-    fig.update_traces(
-        textposition="outside",
-        cliponaxis=False
-    )
+    fig.add_trace(go.Scatter(
+        x=comparison["Relaxation"],
+        y=comparison["Genre"],
+        mode="markers",
+        name="Relaxation",
+        marker=dict(color="#7651A8", size=12),
+        hovertemplate="%{y}<br>Relaxation: %{x}<extra></extra>"
+    ))
+
+    fig.add_trace(go.Scatter(
+        x=comparison["Energy"],
+        y=comparison["Genre"],
+        mode="markers",
+        name="Energy",
+        marker=dict(color="#D6A64B", size=12),
+        hovertemplate="%{y}<br>Energy: %{x}<extra></extra>"
+    ))
 
     fig.update_layout(
-        xaxis_title="Number of Respondents",
-        yaxis_title="",
-        legend=dict(orientation="h", y=1.08, x=0),
-        margin=dict(l=15, r=40, t=75, b=25)
+        title="Relaxation genres vs energy genres",
+        xaxis_title="Number of respondents",
+        yaxis_title="Genre",
+        legend=dict(orientation="h", y=1.08, x=0)
     )
 
-    finish(fig, max(400, 48 * len(comparison)))
+    finish(fig, max(390, 36 * len(comparison)))
 
 
 # --------------------------------------------------
