@@ -115,25 +115,25 @@ div[data-testid="stMetric"] {
     box-shadow: 0 2px 10px rgba(38,24,50,.04);
 }
 
-/* AGE AND GENDER FILTER TEXT VISIBILITY */
+/* AGE AND GENDER SELECTED TEXT FIX */
 
-[data-testid="stSidebar"] div[data-baseweb="select"] > div {
+[data-testid="stSidebar"] [data-baseweb="select"] > div {
     background-color: #FFFFFF !important;
     border: 1px solid #D7CADD !important;
 }
 
-[data-testid="stSidebar"] div[data-baseweb="select"] *,
-[data-testid="stSidebar"] div[data-baseweb="select"] input {
-    color: #241832 !important;
-    -webkit-text-fill-color: #241832 !important;
+/* Make selected age and gender text black */
+
+[data-testid="stSidebar"] [data-baseweb="select"] *,
+[data-testid="stSidebar"] [data-baseweb="select"] span,
+[data-testid="stSidebar"] [data-baseweb="select"] div,
+[data-testid="stSidebar"] [data-baseweb="select"] input {
+    color: #000000 !important;
+    -webkit-text-fill-color: #000000 !important;
     opacity: 1 !important;
 }
 
-[data-testid="stSidebar"] div[data-baseweb="select"] input::placeholder {
-    color: #655873 !important;
-    -webkit-text-fill-color: #655873 !important;
-    opacity: 1 !important;
-}
+/* Dropdown background */
 
 [data-baseweb="popover"],
 [data-baseweb="popover"] ul,
@@ -141,21 +141,27 @@ div[data-testid="stMetric"] {
     background-color: #FFFFFF !important;
 }
 
+/* Dropdown options in black */
+
 [data-baseweb="popover"] *,
 [role="listbox"] *,
 [role="option"] {
-    color: #241832 !important;
-    -webkit-text-fill-color: #241832 !important;
+    color: #000000 !important;
+    -webkit-text-fill-color: #000000 !important;
 }
+
+/* Highlight selected dropdown option */
 
 [role="option"]:hover,
 [aria-selected="true"] {
     background-color: #EEE7F4 !important;
-    color: #241832 !important;
-    -webkit-text-fill-color: #241832 !important;
+    color: #000000 !important;
+    -webkit-text-fill-color: #000000 !important;
 }
 
-div[data-testid="stSelectbox"] [data-testid="stMarkdownContainer"] p {
+/* Keep filter labels white */
+
+[data-testid="stSidebar"] [data-testid="stSelectbox"] label {
     color: #FFFFFF !important;
 }
 
@@ -453,18 +459,9 @@ elif page == "Music Preferences":
                     "bar": {"color": "#7651A8"},
                     "bgcolor": "#F1ECF5",
                     "steps": [
-                        {
-                            "range": [0, 2],
-                            "color": "#F3E4EC"
-                        },
-                        {
-                            "range": [2, 4],
-                            "color": "#E9E1F1"
-                        },
-                        {
-                            "range": [4, 5],
-                            "color": "#DCEDE8"
-                        }
+                        {"range": [0, 2], "color": "#F3E4EC"},
+                        {"range": [2, 4], "color": "#E9E1F1"},
+                        {"range": [4, 5], "color": "#DCEDE8"}
                     ],
                     "threshold": {
                         "line": {
@@ -487,10 +484,7 @@ elif page == "Music Preferences":
         path=["Category"],
         values="People",
         color="People",
-        color_continuous_scale=[
-            "#E9DDF2",
-            "#7651A8"
-        ],
+        color_continuous_scale=["#E9DDF2", "#7651A8"],
         title="Most-used music platforms"
     )
 
@@ -503,10 +497,7 @@ elif page == "Music Preferences":
     left, right = st.columns(2)
 
     with left:
-        horizontal_bar(
-            RELAX,
-            "Music genres for relaxation"
-        )
+        horizontal_bar(RELAX, "Music genres for relaxation")
 
     with right:
 
@@ -522,10 +513,7 @@ elif page == "Music Preferences":
             orientation="h",
             text="People",
             color="People",
-            color_continuous_scale=[
-                "#F2D9A6",
-                "#C05A4A"
-            ],
+            color_continuous_scale=["#F2D9A6", "#C05A4A"],
             title="Music genres for energy"
         )
 
@@ -659,10 +647,7 @@ elif page == "Music & Mood":
     left, right = st.columns(2)
 
     with left:
-        donut(
-            MOOD,
-            "Most common mood while listening"
-        )
+        donut(MOOD, "Most common mood while listening")
 
     with right:
 
@@ -683,13 +668,7 @@ elif page == "Music & Mood":
 
     d = counts(MOOD_CHANGE)
 
-    order = [
-        "Never",
-        "Rarely",
-        "Sometimes",
-        "Often",
-        "Always"
-    ]
+    order = ["Never", "Rarely", "Sometimes", "Often", "Always"]
 
     d["Category"] = pd.Categorical(
         d["Category"],
@@ -699,18 +678,14 @@ elif page == "Music & Mood":
 
     d = d.sort_values("Category")
 
-    d["Percentage"] = (
-        d["People"] / d["People"].sum() * 100
-    )
+    d["Percentage"] = d["People"] / d["People"].sum() * 100
 
     fig = px.bar(
         d,
         x=["Responses"] * len(d),
         y="Percentage",
         color="Category",
-        text=d["Percentage"].map(
-            lambda x: f"{x:.1f}%"
-        ),
+        text=d["Percentage"].map(lambda x: f"{x:.1f}%"),
         color_discrete_sequence=COLORS,
         title="Does music choice change with mood?",
         category_orders={"Category": order}
@@ -720,10 +695,7 @@ elif page == "Music & Mood":
         barmode="stack",
         xaxis_title="",
         yaxis_title="Share of responses",
-        yaxis=dict(
-            range=[0, 100],
-            ticksuffix="%"
-        )
+        yaxis=dict(range=[0, 100], ticksuffix="%")
     )
 
     fig.update_traces(
@@ -800,23 +772,11 @@ elif page == "Music & Mood":
     fig.update_layout(
         xaxis_title="Number of Respondents",
         yaxis_title="",
-        legend=dict(
-            orientation="h",
-            y=1.08,
-            x=0
-        ),
-        margin=dict(
-            l=15,
-            r=40,
-            t=75,
-            b=25
-        )
+        legend=dict(orientation="h", y=1.08, x=0),
+        margin=dict(l=15, r=40, t=75, b=25)
     )
 
-    finish(
-        fig,
-        max(400, 48 * len(comparison))
-    )
+    finish(fig, max(400, 48 * len(comparison)))
 
 
 # -------------------- K-MEANS CLUSTERING PAGE --------------------
@@ -998,9 +958,7 @@ elif page == "About Page":
 
         st.markdown("**Dataset**")
 
-        st.write(
-            "500 survey responses · 13 survey questions"
-        )
+        st.write("500 survey responses · 13 survey questions")
 
         st.markdown("**Main areas**")
 
@@ -1079,7 +1037,7 @@ elif page == "About Page":
         st.markdown(f"- {reference}")
 
 
-# -------------------- CLEAN FOOTER --------------------
+# -------------------- FOOTER --------------------
 
 st.markdown("---")
 
