@@ -1,7 +1,6 @@
 
 from pathlib import Path
 import warnings
-import math
 import pandas as pd
 import streamlit as st
 import plotly.express as px
@@ -55,11 +54,6 @@ def load():
 
 data = load()
 
-
-# --------------------------------------------------
-# CUSTOM CSS
-# --------------------------------------------------
-
 st.markdown("""
 <style>
 .stApp {
@@ -68,7 +62,9 @@ st.markdown("""
 }
 
 [data-testid="stSidebar"] {
-    background: linear-gradient(180deg, #241832 0%, #38234B 100%);
+    background: linear-gradient(
+        180deg, #241832 0%, #38234B 100%
+    );
 }
 
 [data-testid="stSidebar"] * {
@@ -84,10 +80,7 @@ st.markdown("""
     padding: 1.45rem 1.65rem;
     border-radius: 18px;
     background: linear-gradient(
-        112deg,
-        #241832,
-        #5B347A 58%,
-        #A3447E
+        112deg, #241832, #5B347A 58%, #A3447E
     );
     color: white;
     margin: 0 0 1.15rem;
@@ -183,9 +176,7 @@ h2, h3 {
 """, unsafe_allow_html=True)
 
 
-# --------------------------------------------------
-# SIDEBAR AND FILTERS
-# --------------------------------------------------
+# SIDEBAR AND NAVIGATION
 
 st.sidebar.markdown("# Music Mood Dashboard")
 st.sidebar.caption("Music preferences · Listening habits · Mood")
@@ -230,7 +221,9 @@ if a != "All age groups":
 if g != "All genders":
     df = df[df[GENDER].astype(str) == g]
 
-st.sidebar.caption("Filters apply to the survey visualisations.")
+st.sidebar.caption(
+    "Filters apply to the survey visualisations."
+)
 
 if df.empty:
     st.warning(
@@ -240,9 +233,7 @@ if df.empty:
     st.stop()
 
 
-# --------------------------------------------------
-# HELPER FUNCTIONS
-# --------------------------------------------------
+# REUSABLE FUNCTIONS
 
 def hero(title, subtitle=""):
     st.markdown(
@@ -281,7 +272,9 @@ def counts(col):
 
 
 def horizontal_bar(col, title, height=None):
-    d = counts(col).sort_values("People", ascending=True)
+    d = counts(col).sort_values(
+        "People", ascending=True
+    )
 
     fig = px.bar(
         d,
@@ -306,7 +299,10 @@ def horizontal_bar(col, title, height=None):
         showlegend=False
     )
 
-    finish(fig, height or max(340, 38 * len(d)))
+    finish(
+        fig,
+        height or max(340, 38 * len(d))
+    )
 
 
 def column_chart(col, title, order=None, height=390):
@@ -361,8 +357,9 @@ def donut(col, title):
         textposition="inside",
         textinfo="percent+label",
         hovertemplate=(
-            "%{label}<br>%{value} respondents "
-            "(%{percent})<extra></extra>"
+            "%{label}<br>"
+            "%{value} respondents (%{percent})"
+            "<extra></extra>"
         )
     )
 
@@ -387,9 +384,7 @@ def multi_counts():
     )
 
 
-# --------------------------------------------------
-# DASHBOARD PAGE
-# --------------------------------------------------
+# PAGE 1: DASHBOARD
 
 if page == "Dashboard":
 
@@ -414,9 +409,7 @@ if page == "Dashboard":
         horizontal_bar(AGE, "Respondents by age group")
 
 
-# --------------------------------------------------
-# MUSIC PREFERENCES PAGE
-# --------------------------------------------------
+# PAGE 2: MUSIC PREFERENCES
 
 elif page == "Music Preferences":
 
@@ -428,16 +421,21 @@ elif page == "Music Preferences":
     left, right = st.columns([1.2, 1])
 
     with left:
-        horizontal_bar(GENRE, "Favourite music genres")
+        horizontal_bar(
+            GENRE,
+            "Favourite music genres"
+        )
 
     with right:
-
         score = pd.to_numeric(
             df["Music_Importance_Score"],
             errors="coerce"
         ).dropna()
 
-        average = float(score.mean()) if not score.empty else 0
+        average = (
+            float(score.mean())
+            if not score.empty else 0
+        )
 
         gauge = go.Figure(
             go.Indicator(
@@ -497,7 +495,9 @@ elif page == "Music Preferences":
         path=["Category"],
         values="People",
         color="People",
-        color_continuous_scale=["#E9DDF2", "#7651A8"],
+        color_continuous_scale=[
+            "#E9DDF2", "#7651A8"
+        ],
         title="Most-used music platforms"
     )
 
@@ -516,7 +516,6 @@ elif page == "Music Preferences":
         )
 
     with right:
-
         d = counts(ENERGY).sort_values(
             "People",
             ascending=True
@@ -529,7 +528,9 @@ elif page == "Music Preferences":
             orientation="h",
             text="People",
             color="People",
-            color_continuous_scale=["#F2D9A6", "#C05A4A"],
+            color_continuous_scale=[
+                "#F2D9A6", "#C05A4A"
+            ],
             title="Music genres for energy"
         )
 
@@ -544,12 +545,13 @@ elif page == "Music Preferences":
             coloraxis_showscale=False
         )
 
-        finish(fig, max(340, 38 * len(d)))
+        finish(
+            fig,
+            max(340, 38 * len(d))
+        )
 
 
-# --------------------------------------------------
-# LISTENING HABITS PAGE
-# --------------------------------------------------
+# PAGE 3: LISTENING HABITS
 
 elif page == "Listening Habits":
 
@@ -574,7 +576,6 @@ elif page == "Listening Habits":
         )
 
     with right:
-
         d = counts(HOURS)
 
         hour_order = [
@@ -616,14 +617,17 @@ elif page == "Listening Habits":
 
         finish(fig, 400)
 
-    bubble = (
-        multi_counts()
-        .sort_values("Selections", ascending=False)
-        .reset_index(drop=True)
-    )
+    bubble = multi_counts().sort_values(
+        "Selections",
+        ascending=False
+    ).reset_index(drop=True)
+
+    # Greedy circle packing
+    import math
 
     radii = (
-        bubble["Selections"] / bubble["Selections"].max()
+        bubble["Selections"] /
+        bubble["Selections"].max()
     ).pow(0.5) * 1.05
 
     positions = []
@@ -639,7 +643,10 @@ elif page == "Listening Habits":
         for ring in range(1, 180):
 
             distance = ring * 0.075
-            steps = max(24, int(2 * math.pi * ring * 5))
+            steps = max(
+                24,
+                int(2 * math.pi * ring * 5)
+            )
 
             for step in range(steps):
 
@@ -658,7 +665,6 @@ elif page == "Listening Habits":
                         radii[:len(positions)]
                     )
                 ):
-
                     positions.append(candidate)
                     placed = True
                     break
@@ -667,10 +673,18 @@ elif page == "Listening Habits":
                 break
 
         if not placed:
-            positions.append((len(positions) * 2.5, 0.0))
+            positions.append(
+                (len(positions) * 2.5, 0.0)
+            )
 
-    bubble["x"] = [point[0] for point in positions]
-    bubble["y"] = [point[1] for point in positions]
+    bubble["x"] = [
+        point[0] for point in positions
+    ]
+
+    bubble["y"] = [
+        point[1] for point in positions
+    ]
+
     bubble["Bubble size"] = bubble["Selections"]
 
     fig = px.scatter(
@@ -692,8 +706,9 @@ elif page == "Listening Habits":
             line=dict(width=1.5, color="white")
         ),
         hovertemplate=(
-            "%{text}<br>%{customdata[0]} "
-            "selections<extra></extra>"
+            "%{text}<br>"
+            "%{customdata[0]} selections"
+            "<extra></extra>"
         ),
         customdata=bubble[["Selections"]].to_numpy()
     )
@@ -712,9 +727,7 @@ elif page == "Listening Habits":
     finish(fig, 460)
 
 
-# --------------------------------------------------
-# MUSIC AND MOOD PAGE
-# --------------------------------------------------
+# PAGE 4: MUSIC AND MOOD
 
 elif page == "Music & Mood":
 
@@ -732,7 +745,6 @@ elif page == "Music & Mood":
         )
 
     with right:
-
         d = counts(MOOD_EFFECT)
 
         fig = px.bar_polar(
@@ -796,7 +808,8 @@ elif page == "Music & Mood":
     fig.update_traces(
         textposition="inside",
         hovertemplate=(
-            "%{fullData.name}: %{y:.1f}%<extra></extra>"
+            "%{fullData.name}: "
+            "%{y:.1f}%<extra></extra>"
         )
     )
 
@@ -826,7 +839,8 @@ elif page == "Music & Mood":
     comparison.index.name = "Genre"
 
     comparison = (
-        comparison.reset_index()
+        comparison
+        .reset_index()
         .sort_values(
             ["Relaxation", "Energy"],
             ascending=True
@@ -868,7 +882,8 @@ elif page == "Music & Mood":
                 size=12
             ),
             hovertemplate=(
-                "%{y}<br>Relaxation: %{x}<extra></extra>"
+                "%{y}<br>"
+                "Relaxation: %{x}<extra></extra>"
             )
         )
     )
@@ -884,7 +899,8 @@ elif page == "Music & Mood":
                 size=12
             ),
             hovertemplate=(
-                "%{y}<br>Energy: %{x}<extra></extra>"
+                "%{y}<br>"
+                "Energy: %{x}<extra></extra>"
             )
         )
     )
@@ -900,12 +916,13 @@ elif page == "Music & Mood":
         )
     )
 
-    finish(fig, max(390, 36 * len(comparison)))
+    finish(
+        fig,
+        max(390, 36 * len(comparison))
+    )
 
 
-# --------------------------------------------------
-# K-MEANS CLUSTERING PAGE
-# --------------------------------------------------
+# PAGE 5: K-MEANS CLUSTERING
 
 elif page == "K-Means Clustering":
 
@@ -921,7 +938,10 @@ elif page == "K-Means Clustering":
         "Mood_Change_Score"
     ]
 
-    cols = [c for c in cols if c in df]
+    cols = [
+        c for c in cols
+        if c in df
+    ]
 
     frame = (
         df[cols]
@@ -963,7 +983,7 @@ elif page == "K-Means Clustering":
             "Component 1": xy[:, 0],
             "Component 2": xy[:, 1],
             "Cluster": [
-                f"Cluster {i+1}"
+                f"Cluster {i + 1}"
                 for i in labels
             ]
         })
@@ -993,7 +1013,7 @@ elif page == "K-Means Clustering":
         )
 
         sizes["Cluster"] = sizes.Cluster.map(
-            lambda n: f"Cluster {n+1}"
+            lambda n: f"Cluster {n + 1}"
         )
 
         fig = px.bar(
@@ -1015,7 +1035,7 @@ elif page == "K-Means Clustering":
         profile = (
             frame.assign(
                 Cluster=[
-                    f"Cluster {i+1}"
+                    f"Cluster {i + 1}"
                     for i in labels
                 ]
             )
@@ -1048,9 +1068,7 @@ elif page == "K-Means Clustering":
         finish(fig, 420)
 
 
-# --------------------------------------------------
-# ABOUT PAGE
-# --------------------------------------------------
+# PAGE 6: ABOUT PAGE
 
 elif page == "About Page":
 
@@ -1062,12 +1080,11 @@ elif page == "About Page":
     st.markdown("### About the Project")
 
     st.write(
-        "The Music Mood Dashboard explores how people choose and "
-        "use music in everyday life. Using survey responses, it "
-        "presents patterns in favourite genres, music platforms, "
-        "listening frequency and duration, listening situations, "
-        "and self-reported mood. The dashboard also includes a "
-        "K-Means clustering view to explore groups of respondents "
+        "The Music Mood Dashboard explores how people choose and use music "
+        "in everyday life. Using survey responses, it presents patterns in "
+        "favourite genres, music platforms, listening frequency and duration, "
+        "listening situations, and self-reported mood. The dashboard also "
+        "includes a K-Means clustering view to explore groups of respondents "
         "with similar listening-score patterns."
     )
 
@@ -1085,10 +1102,7 @@ elif page == "About Page":
         )
 
         st.markdown("**Dataset**")
-
-        st.write(
-            "500 survey responses · 13 survey questions"
-        )
+        st.write("500 survey responses · 13 survey questions")
 
         st.markdown("**Main areas**")
 
@@ -1108,10 +1122,9 @@ elif page == "About Page":
         st.markdown("**Analytical approach**")
 
         st.write(
-            "Descriptive frequency counts and percentages, "
-            "score-based summaries, multi-response counting "
-            "for listening situations, and K-Means clustering "
-            "using the existing numerical score features."
+            "Descriptive frequency counts and percentages, score-based "
+            "summaries, multi-response counting for listening situations, "
+            "and K-Means clustering using the existing numerical score features."
         )
 
     st.markdown("### Dashboard Features")
@@ -1156,15 +1169,10 @@ elif page == "About Page":
 
     references = [
         "McKinney, W. (2010). Data structures for statistical computing in Python. Proceedings of the 9th Python in Science Conference, 56–61. https://doi.org/10.25080/Majora-92bf1922-00a",
-
         "Plotly Technologies Inc. (n.d.). Plotly Python graphing library. https://plotly.com/python/",
-
         "Python Software Foundation. (n.d.). Python documentation. https://docs.python.org/3/",
-
         "scikit-learn developers. (n.d.). 2.3. Clustering. https://scikit-learn.org/stable/modules/clustering.html",
-
         "Streamlit, Inc. (n.d.). Streamlit documentation. https://docs.streamlit.io/",
-
         "The pandas development team. (n.d.). pandas documentation. https://pandas.pydata.org/docs/"
     ]
 
@@ -1172,9 +1180,7 @@ elif page == "About Page":
         st.markdown(f"- {reference}")
 
 
-# --------------------------------------------------
 # FOOTER
-# --------------------------------------------------
 
 st.markdown("---")
 
@@ -1183,41 +1189,62 @@ st.caption(
     "identifies the responses as synthetic."
 )
 
-# Made with Streamlit footer logo
+# CSS-based Streamlit-style logo
+# This avoids displaying raw SVG path code.
+
 st.markdown(
     """
     <div style="
         display:flex;
         justify-content:center;
         align-items:center;
-        gap:9px;
-        padding:10px 0 5px 0;
+        gap:10px;
+        padding:15px 0 10px 0;
     ">
-        <svg width="25" height="25"
-             viewBox="0 0 40 40"
-             aria-label="Streamlit-style logo"
-             role="img">
 
-            <path
-                d="M4 7 L34 7 L29 14 L9 14 Z"
-                fill="#FF4B4B"
-            />
+        <div style="
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+            gap:2px;
+        ">
 
-            <path
-                d="M8 17 L30 17 L25 24 L13 24 Z"
-                fill="#FF4B4B"
-            />
+            <div style="
+                width:27px;
+                height:7px;
+                background:#FF4B4B;
+                clip-path:polygon(
+                    0 0, 100% 0, 80% 100%, 20% 100%
+                );
+            "></div>
 
-            <path
-                d="M12 27 L26 27 L21 34 L17 34 Z"
-                fill="#FF4B4B"
-            />
+            <div style="
+                width:21px;
+                height:7px;
+                background:#FF4B4B;
+                clip-path:polygon(
+                    0 0, 100% 0, 80% 100%, 20% 100%
+                );
+            "></div>
 
-        </svg>
+            <div style="
+                width:15px;
+                height:7px;
+                background:#FF4B4B;
+                clip-path:polygon(
+                    0 0, 100% 0, 80% 100%, 20% 100%
+                );
+            "></div>
 
-        <span style="color:#888; font-size:14px;">
+        </div>
+
+        <span style="
+            color:#888;
+            font-size:14px;
+        ">
             Made with <strong>Streamlit</strong>
         </span>
+
     </div>
     """,
     unsafe_allow_html=True
