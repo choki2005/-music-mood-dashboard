@@ -55,6 +55,7 @@ def load():
 
 data = load()
 
+
 # --------------------------------------------------
 # PAGE DESIGN AND CSS
 # --------------------------------------------------
@@ -116,70 +117,7 @@ div[data-testid="stMetric"] {
     box-shadow: 0 2px 10px rgba(38,24,50,.04);
 }
 
-/* ================================================
-   AGE AND GENDER SELECTBOX FIX
-   Black filter box with clearly visible white text
-   ================================================ */
-
-/* Black background for both filter boxes */
-[data-testid="stSidebar"] [data-testid="stSelectbox"] [data-baseweb="select"],
-[data-testid="stSidebar"] [data-testid="stSelectbox"] [data-baseweb="select"] > div {
-    background-color: #000000 !important;
-    border-color: #FFFFFF !important;
-}
-
-/* Selected Age and Gender text in white */
-[data-testid="stSidebar"] [data-testid="stSelectbox"] [data-baseweb="select"],
-[data-testid="stSidebar"] [data-testid="stSelectbox"] [data-baseweb="select"] div,
-[data-testid="stSidebar"] [data-testid="stSelectbox"] [data-baseweb="select"] span,
-[data-testid="stSidebar"] [data-testid="stSelectbox"] [data-baseweb="select"] input,
-[data-testid="stSidebar"] [data-testid="stSelectbox"] [data-baseweb="select"] [class*="singleValue"],
-[data-testid="stSidebar"] [data-testid="stSelectbox"] [data-baseweb="select"] [class*="valueContainer"] {
-    color: #FFFFFF !important;
-    -webkit-text-fill-color: #FFFFFF !important;
-    opacity: 1 !important;
-}
-
-/* Keep the selected-value text white */
-[data-testid="stSidebar"] [data-testid="stSelectbox"] [data-baseweb="select"] [class*="ValueContainer"] * {
-    color: #FFFFFF !important;
-    -webkit-text-fill-color: #FFFFFF !important;
-}
-
-/* Dropdown arrow in white */
-[data-testid="stSidebar"] [data-testid="stSelectbox"] [data-baseweb="select"] svg {
-    fill: #FFFFFF !important;
-    color: #FFFFFF !important;
-}
-
-/* Dropdown menu remains white */
-[data-baseweb="popover"],
-[data-baseweb="popover"] ul,
-[role="listbox"] {
-    background-color: #FFFFFF !important;
-}
-
-/* Dropdown choices in black */
-[data-baseweb="popover"] *,
-[role="listbox"] *,
-[role="option"] {
-    color: #000000 !important;
-    -webkit-text-fill-color: #000000 !important;
-}
-
-/* Selected or hovered dropdown option */
-[role="option"]:hover,
-[role="option"][aria-selected="true"],
-[aria-selected="true"] {
-    background-color: #EEE7F4 !important;
-    color: #000000 !important;
-    -webkit-text-fill-color: #000000 !important;
-}
-
-/* Keep Age group and Gender labels white */
-[data-testid="stSidebar"] [data-testid="stSelectbox"] label {
-    color: #FFFFFF !important;
-}
+/* Headings */
 
 h2, h3 {
     color: #39254D;
@@ -190,6 +128,8 @@ h2, h3 {
     padding-bottom: 2rem;
 }
 
+/* Responsive design */
+
 @media(max-width:700px) {
     .hero {
         padding: 1.1rem;
@@ -198,6 +138,7 @@ h2, h3 {
     .hero h1 {
         font-size: 1.5rem;
     }
+}
 
 </style>
 """, unsafe_allow_html=True)
@@ -208,7 +149,10 @@ h2, h3 {
 # --------------------------------------------------
 
 st.sidebar.markdown("# Music Mood Dashboard")
-st.sidebar.caption("Music preferences · Listening habits · Mood")
+
+st.sidebar.caption(
+    "Music preferences · Listening habits · Mood"
+)
 
 st.sidebar.markdown("### Overview")
 
@@ -226,26 +170,39 @@ page = st.sidebar.radio(
 )
 
 st.sidebar.markdown("---")
+
 st.sidebar.markdown("### Filters")
 
 
 # --------------------------------------------------
 # AGE AND GENDER FILTERS
+# RADIO BUTTONS INSTEAD OF DROPDOWNS
 # --------------------------------------------------
 
-ages = sorted(data[AGE].dropna().astype(str).unique())
-genders = sorted(data[GENDER].dropna().astype(str).unique())
-
-a = st.sidebar.selectbox(
-    "Age group",
-    ["All age groups"] + ages,
-    key="age_filter"
+ages = sorted(
+    data[AGE].dropna().astype(str).unique()
 )
 
-g = st.sidebar.selectbox(
-    "Gender",
+genders = sorted(
+    data[GENDER].dropna().astype(str).unique()
+)
+
+st.sidebar.markdown("**Age group**")
+
+a = st.sidebar.radio(
+    "Select age group",
+    ["All age groups"] + ages,
+    key="age_filter",
+    label_visibility="collapsed"
+)
+
+st.sidebar.markdown("**Gender**")
+
+g = st.sidebar.radio(
+    "Select gender",
     ["All genders"] + genders,
-    key="gender_filter"
+    key="gender_filter",
+    label_visibility="collapsed"
 )
 
 
@@ -318,7 +275,10 @@ def counts(col):
 
 
 def horizontal_bar(col, title, height=None):
-    d = counts(col).sort_values("People", ascending=True)
+    d = counts(col).sort_values(
+        "People",
+        ascending=True
+    )
 
     fig = px.bar(
         d,
@@ -343,7 +303,10 @@ def horizontal_bar(col, title, height=None):
         showlegend=False
     )
 
-    finish(fig, height or max(340, 38 * len(d)))
+    finish(
+        fig,
+        height or max(340, 38 * len(d))
+    )
 
 
 def column_chart(col, title, order=None, height=390):
@@ -355,6 +318,7 @@ def column_chart(col, title, order=None, height=390):
             categories=order,
             ordered=True
         )
+
         d = d.sort_values("Category")
 
     fig = px.bar(
@@ -449,7 +413,10 @@ if page == "Dashboard":
         donut(GENDER, "Respondents by gender")
 
     with right:
-        horizontal_bar(AGE, "Respondents by age group")
+        horizontal_bar(
+            AGE,
+            "Respondents by age group"
+        )
 
 
 # --------------------------------------------------
@@ -466,7 +433,10 @@ elif page == "Music Preferences":
     left, right = st.columns([1.2, 1])
 
     with left:
-        horizontal_bar(GENRE, "Favourite music genres")
+        horizontal_bar(
+            GENRE,
+            "Favourite music genres"
+        )
 
     with right:
 
@@ -475,7 +445,10 @@ elif page == "Music Preferences":
             errors="coerce"
         ).dropna()
 
-        average = float(score.mean()) if not score.empty else 0
+        average = (
+            float(score.mean())
+            if not score.empty else 0
+        )
 
         gauge = go.Figure(
             go.Indicator(
@@ -483,7 +456,10 @@ elif page == "Music Preferences":
                 value=average,
                 number={
                     "suffix": " / 5",
-                    "font": {"size": 34, "color": "#39254D"}
+                    "font": {
+                        "size": 34,
+                        "color": "#39254D"
+                    }
                 },
                 title={
                     "text": "Average importance of music",
@@ -503,7 +479,10 @@ elif page == "Music Preferences":
                         {"range": [4, 5], "color": "#DCEDE8"}
                     ],
                     "threshold": {
-                        "line": {"color": "#C05A93", "width": 4},
+                        "line": {
+                            "color": "#C05A93",
+                            "width": 4
+                        },
                         "thickness": .8,
                         "value": average
                     }
@@ -520,17 +499,26 @@ elif page == "Music Preferences":
         path=["Category"],
         values="People",
         color="People",
-        color_continuous_scale=["#E9DDF2", "#7651A8"],
+        color_continuous_scale=[
+            "#E9DDF2",
+            "#7651A8"
+        ],
         title="Most-used music platforms"
     )
 
-    tree.update_traces(textinfo="label+value+percent root")
+    tree.update_traces(
+        textinfo="label+value+percent root"
+    )
+
     finish(tree, 420)
 
     left, right = st.columns(2)
 
     with left:
-        horizontal_bar(RELAX, "Music genres for relaxation")
+        horizontal_bar(
+            RELAX,
+            "Music genres for relaxation"
+        )
 
     with right:
 
@@ -546,7 +534,10 @@ elif page == "Music Preferences":
             orientation="h",
             text="People",
             color="People",
-            color_continuous_scale=["#F2D9A6", "#C05A4A"],
+            color_continuous_scale=[
+                "#F2D9A6",
+                "#C05A4A"
+            ],
             title="Music genres for energy"
         )
 
@@ -561,7 +552,10 @@ elif page == "Music Preferences":
             coloraxis_showscale=False
         )
 
-        finish(fig, max(340, 38 * len(d)))
+        finish(
+            fig,
+            max(340, 38 * len(d))
+        )
 
 
 # --------------------------------------------------
@@ -652,7 +646,9 @@ elif page == "Listening Habits":
     fig.update_traces(
         textposition="outside",
         cliponaxis=False,
-        hovertemplate="%{y}<br>%{x} selections<extra></extra>"
+        hovertemplate=(
+            "%{y}<br>%{x} selections<extra></extra>"
+        )
     )
 
     fig.update_layout(
@@ -662,7 +658,10 @@ elif page == "Listening Habits":
         margin=dict(l=15, r=35, t=58, b=25)
     )
 
-    finish(fig, max(360, 42 * len(situations)))
+    finish(
+        fig,
+        max(360, 42 * len(situations))
+    )
 
 
 # --------------------------------------------------
@@ -679,7 +678,10 @@ elif page == "Music & Mood":
     left, right = st.columns(2)
 
     with left:
-        donut(MOOD, "Most common mood while listening")
+        donut(
+            MOOD,
+            "Most common mood while listening"
+        )
 
     with right:
 
@@ -695,11 +697,18 @@ elif page == "Music & Mood":
         )
 
         fig.update_traces(opacity=.86)
+
         finish(fig, 420)
 
     d = counts(MOOD_CHANGE)
 
-    order = ["Never", "Rarely", "Sometimes", "Often", "Always"]
+    order = [
+        "Never",
+        "Rarely",
+        "Sometimes",
+        "Often",
+        "Always"
+    ]
 
     d["Category"] = pd.Categorical(
         d["Category"],
@@ -708,14 +717,19 @@ elif page == "Music & Mood":
     )
 
     d = d.sort_values("Category")
-    d["Percentage"] = d["People"] / d["People"].sum() * 100
+
+    d["Percentage"] = (
+        d["People"] / d["People"].sum() * 100
+    )
 
     fig = px.bar(
         d,
         x=["Responses"] * len(d),
         y="Percentage",
         color="Category",
-        text=d["Percentage"].map(lambda x: f"{x:.1f}%"),
+        text=d["Percentage"].map(
+            lambda x: f"{x:.1f}%"
+        ),
         color_discrete_sequence=COLORS,
         title="Does music choice change with mood?",
         category_orders={"Category": order}
@@ -725,7 +739,10 @@ elif page == "Music & Mood":
         barmode="stack",
         xaxis_title="",
         yaxis_title="Share of responses",
-        yaxis=dict(range=[0, 100], ticksuffix="%")
+        yaxis=dict(
+            range=[0, 100],
+            ticksuffix="%"
+        )
     )
 
     fig.update_traces(
@@ -760,6 +777,7 @@ elif page == "Music & Mood":
     ).fillna(0).astype(int)
 
     comparison.index.name = "Genre"
+
     comparison = comparison.reset_index()
 
     comparison["Total"] = (
@@ -802,11 +820,23 @@ elif page == "Music & Mood":
     fig.update_layout(
         xaxis_title="Number of Respondents",
         yaxis_title="",
-        legend=dict(orientation="h", y=1.08, x=0),
-        margin=dict(l=15, r=40, t=75, b=25)
+        legend=dict(
+            orientation="h",
+            y=1.08,
+            x=0
+        ),
+        margin=dict(
+            l=15,
+            r=40,
+            t=75,
+            b=25
+        )
     )
 
-    finish(fig, max(400, 48 * len(comparison)))
+    finish(
+        fig,
+        max(400, 48 * len(comparison))
+    )
 
 
 # --------------------------------------------------
@@ -827,7 +857,9 @@ elif page == "K-Means Clustering":
         "Mood_Change_Score"
     ]
 
-    cols = [c for c in cols if c in df]
+    cols = [
+        c for c in cols if c in df
+    ]
 
     frame = df[cols].apply(
         pd.to_numeric,
@@ -882,7 +914,10 @@ elif page == "K-Means Clustering":
             opacity=.82
         )
 
-        fig.update_traces(marker=dict(size=9))
+        fig.update_traces(
+            marker=dict(size=9)
+        )
+
         finish(fig, 490)
 
         sizes = (
@@ -907,7 +942,10 @@ elif page == "K-Means Clustering":
             title="Number of respondents in each cluster"
         )
 
-        fig.update_traces(textposition="outside")
+        fig.update_traces(
+            textposition="outside"
+        )
+
         finish(fig, 350)
 
         profile = (
@@ -938,7 +976,10 @@ elif page == "K-Means Clustering":
             title="Average score profile by cluster"
         )
 
-        fig.update_layout(xaxis_tickangle=-15)
+        fig.update_layout(
+            xaxis_tickangle=-15
+        )
+
         finish(fig, 420)
 
 
@@ -979,7 +1020,10 @@ elif page == "About Page":
         )
 
         st.markdown("**Dataset**")
-        st.write("500 survey responses · 13 survey questions")
+
+        st.write(
+            "500 survey responses · 13 survey questions"
+        )
 
         st.markdown("**Main areas**")
 
@@ -1041,6 +1085,7 @@ elif page == "About Page":
         with feature_cols[i % 2]:
 
             st.markdown(f"**{name}**")
+
             st.write(description)
 
     st.markdown("### References")
